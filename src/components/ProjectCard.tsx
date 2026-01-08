@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Instagram } from 'lucide-react';
 import './project-card.css';
 
 interface ProjectCardProps {
@@ -8,10 +8,11 @@ interface ProjectCardProps {
     tags: string[];
     image: string;
     link: string;
-    github: string;
+    github?: string;
+    instagram?: string;
 }
 
-export const ProjectCard = ({ title, description, tags, image, link, github }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tags, image, link, github, instagram }: ProjectCardProps) => {
     return (
         <motion.div
             className="project-card"
@@ -21,7 +22,8 @@ export const ProjectCard = ({ title, description, tags, image, link, github }: P
                 <img src={image} alt={title} />
                 <div className="overlay">
                     <a href={link} target="_blank" rel="noopener noreferrer"><ExternalLink /></a>
-                    <a href={github} target="_blank" rel="noopener noreferrer"><Github /></a>
+                    {github && <a href={github} target="_blank" rel="noopener noreferrer"><Github /></a>}
+                    {instagram && <a href={instagram} target="_blank" rel="noopener noreferrer"><Instagram /></a>}
                 </div>
             </div>
             <div className="card-content">

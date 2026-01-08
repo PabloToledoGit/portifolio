@@ -1,23 +1,34 @@
 .navbar {
     position: fixed;
-    top: 1rem;
+    top: 1.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 90%;
-    max-width: 900px;
-    height: 64px;
-    background: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--border-color);
-    border-radius: 99px;
-    z-index: 1000;
+    width: 95%;
+    max-width: var(--container-width);
+    height: 70px;
+    background: rgba(3, 3, 3, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    z-index: 10000;
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease;
+    transition: all var(--transition-normal);
+}
+
+.navbar.scrolled {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+    background: rgba(3, 3, 3, 0.95);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    left: 0;
+    transform: none;
 }
 
 .nav-content {
@@ -27,103 +38,168 @@
     width: 100%;
 }
 
-/* Language Button */
-.lang-btn {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    z-index: 10002;
     cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Desktop Menu */
+.desktop-menu {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 99px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.2s;
-    margin-right: 0.5rem;
-}
-
-.lang-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .logo {
-        /* Make space for the button if needed, but flex-between handles it */
-    }
-
-    /* On mobile, we might want to keep the language button visible even if social links are hidden */
-    .social-links {
-        display: flex;
-        /* Override previous none */
-        gap: 0.5rem;
-    }
-
-    .social-links a {
-        display: none;
-        /* Hide social icons only */
-    }
-
-    .lang-btn {
-        margin-right: 0;
-        padding: 0.3rem 0.6rem;
-        font-size: 0.75rem;
-    }
-}
-
-.logo {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: #fff;
+    gap: 2rem;
 }
 
 .nav-links {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
+    align-items: center;
 }
 
 .nav-links li {
     position: relative;
+    display: flex;
+    /* Ensure li doesn't collapse */
 }
 
 .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--text-secondary);
     padding: 0.5rem 1rem;
-    border-radius: 99px;
-    transition: all 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    /* Prevent wrapping */
+    display: inline-block;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.08);
-}
-
-/* Removing old underlines */
-.nav-links a::after {
-    display: none;
+.nav-links a:hover {
+    color: var(--text-primary);
+    background: var(--glass-border);
 }
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--border-subtle);
 }
 
 .social-links a {
-    opacity: 0.5;
-    transition: var(--transition-fast);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
 }
 
 .social-links a:hover {
-    opacity: 1;
-    color: #fff;
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* Language Button */
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    margin-right: 0.5rem;
+}
+
+.lang-btn:hover {
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+/* Menu Button (Mobile) */
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1002;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-color);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu.open {
+    pointer-events: auto;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-nav-links a {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.mobile-nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.mobile-social-links {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.mobile-social-links .social-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        top: 1rem;
+        width: 92%;
+        height: 60px;
+        padding: 0 1rem;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
 }

@@ -65,7 +65,7 @@ const translations = {
         "projects.title": "Projetos Selecionados",
         "projects.subtitle": "Alguns dos trabalhos que desenvolvi recentemente.",
         "projects.nutrify.desc": "Plataforma de dietas personalizadas com IA e lógica nutricional validada. Integração com Mercado Pago e foco em UX.",
-        "projects.dashboard.desc": "Painel administrativo completo com gráficos em tempo real e gestão de pedidos.",
+        "projects.dashboard.desc": "Painel administrativo para gestão de dietas, usuários e conteúdo do Nutrify.",
         "projects.social.desc": "Interface moderna para aplicação social com foco em experiência mobile.",
 
         // Contact
@@ -132,7 +132,7 @@ const translations = {
         "projects.title": "Selected Projects",
         "projects.subtitle": "Some of the work I've developed recently.",
         "projects.nutrify.desc": "Personalized diet platform with AI and validated nutritional logic. Mercado Pago integration and UX focus.",
-        "projects.dashboard.desc": "Complete admin dashboard with real-time charts and order management.",
+        "projects.dashboard.desc": "Administrative dashboard for managing diets, users, and Nutrify content.",
         "projects.social.desc": "Modern interface for a social application focused on mobile experience.",
 
         // Contact

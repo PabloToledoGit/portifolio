@@ -1,6 +1,8 @@
 import { ProjectCard } from '../components/ProjectCard';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
+import nutrifyImg from '../assets/nutrify.png';
+import nutrifyDashboardImg from '../assets/nutrify-dashboard.png';
 import './projects.css';
 
 export const Projects = () => {
@@ -11,16 +13,16 @@ export const Projects = () => {
             title: 'Nutrify',
             description: t('projects.nutrify.desc'),
             tags: ['React', 'Node.js', 'OpenAI API', 'Mercado Pago', 'UX/UI'],
-            image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80',
-            link: '#',
-            github: '#'
+            image: nutrifyImg,
+            link: 'https://www.nutrifyservice.com',
+            instagram: 'https://www.instagram.com/nutrifyservice/'
         },
         {
-            title: 'E-commerce Dashboard',
+            title: 'Nutrify Dashboard',
             description: t('projects.dashboard.desc'),
-            tags: ['React', 'TypeScript', 'Chart.js'],
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-            link: '#',
+            tags: ['React', 'TypeScript', 'Admin'],
+            image: nutrifyDashboardImg,
+            link: 'https://nutrify-dash.vercel.app',
             github: '#'
         },
         {
