@@ -20,6 +20,9 @@ const translations = {
         "hero.role": "Desenvolvedor Fullstack Web & Mobile especializado em criar soluções modernas, escaláveis e de alto impacto.",
         "hero.projects": "Ver Projetos",
         "hero.contact": "Entrar em contato",
+        "hero.unlock_label": "Clique em mim para liberar segredos 🔓",
+        "hero.unlock_success": "WhatsApp Desbloqueado! 🚀",
+        "hero.unlock_progress": "Progresso de Desbloqueio",
 
         // About
         "about.title": "Sobre mim",
@@ -87,6 +90,9 @@ const translations = {
         "hero.role": "Fullstack Web & Mobile Developer specialized in creating modern, scalable, and high-impact solutions.",
         "hero.projects": "View Projects",
         "hero.contact": "Get in touch",
+        "hero.unlock_label": "Click me to unlock secrets 🔓",
+        "hero.unlock_success": "WhatsApp Unlocked! 🚀",
+        "hero.unlock_progress": "Unlock Progress",
 
         // About
         "about.title": "About me",
