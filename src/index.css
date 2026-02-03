@@ -12,6 +12,8 @@
   --text-muted: #52525b;
 
   --accent-color: #fff;
+  --accent-primary: #1a73e8;
+  --accent-secondary: #00e5ff;
   --accent-glow: rgba(255, 255, 255, 0.08);
 
   --border-subtle: rgba(255, 255, 255, 0.06);
@@ -213,4 +215,19 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Page Transition Wrapper */
+main {
+  min-height: calc(100vh - 80px);
+  /* Adjust based on navbar height */
+}
+
+/* Additional Styles for NotFound */
+.not-found {
+  --accent-primary: #3b82f6;
+  --accent-secondary: #06b6d4;
+  --bg-primary: #030303;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
 }
