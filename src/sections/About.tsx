@@ -24,7 +24,7 @@ export const About = () => {
                     <div className="skills">
                         <h3>{t('about.skills')}</h3>
                         <div className="skills-grid">
-                            {['React', 'Node.js', 'Vite', 'Git', 'OpenAI API', 'Payments', 'TypeScript', 'Tailwind'].map(skill => (
+                            {['React', 'Node.js', 'Flutter', 'Dart', 'TypeScript', 'Clean Architecture', 'OpenAI API', 'Git'].map(skill => (
                                 <div key={skill} className="skill-item">{skill}</div>
                             ))}
                         </div>

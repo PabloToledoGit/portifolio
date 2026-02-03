@@ -3,12 +3,21 @@ import { ScrollReveal } from '../components/ScrollReveal';
 import { useLanguage } from '../contexts/LanguageContext';
 import nutrifyImg from '../assets/nutrify.png';
 import nutrifyDashboardImg from '../assets/nutrify-dashboard.png';
+import nutrifyMobileImg from '../assets/nutrify-mobile.png';
 import './projects.css';
 
 export const Projects = () => {
     const { t } = useLanguage();
 
     const projects = [
+        {
+            title: 'Nutrify Mobile',
+            description: t('projects.nutrify_mobile.desc'),
+            tags: ['Flutter', 'Dart', 'Firebase', 'Clean Architecture'],
+            image: nutrifyMobileImg,
+            link: '#',
+            github: 'https://github.com/PabloToledoGit'
+        },
         {
             title: 'Nutrify',
             description: t('projects.nutrify.desc'),
@@ -23,14 +32,6 @@ export const Projects = () => {
             tags: ['React', 'TypeScript', 'Admin'],
             image: nutrifyDashboardImg,
             link: 'https://nutrify-dash.vercel.app',
-            github: '#'
-        },
-        {
-            title: 'Social App UI',
-            description: t('projects.social.desc'),
-            tags: ['React', 'Framer Motion', 'Tailwind'],
-            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
-            link: '#',
             github: '#'
         }
     ];

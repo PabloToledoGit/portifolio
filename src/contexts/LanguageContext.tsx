@@ -17,14 +17,14 @@ const translations = {
 
         // Hero
         "hero.greeting": "Olá, eu sou",
-        "hero.role": "Desenvolvedor Web Fullstack especializado em criar soluções modernas e escaláveis.",
+        "hero.role": "Desenvolvedor Fullstack Web & Mobile especializado em criar soluções modernas, escaláveis e de alto impacto.",
         "hero.projects": "Ver Projetos",
         "hero.contact": "Entrar em contato",
 
         // About
         "about.title": "Sobre mim",
-        "about.p1": "Sou desenvolvedor Web Fullstack com experiência em criar desde interfaces interativas até sistemas robustos. Tenho facilidade com integração de IA em sistemas e gateways de pagamento, além de vivência no setor administrativo de T.I.",
-        "about.p2": "Atualmente foco em React, Node.js e ecossistema moderno de desenvolvimento. Sou graduado em Análise e Desenvolvimento de Sistemas pela Estácio.",
+        "about.p1": "Sou desenvolvedor Web Fullstack e Mobile com experiência em criar desde interfaces interativas até sistemas robustos. Tenho facilidade com integração de IA em sistemas, gateways de pagamento e desenvolvimento cross-platform com Flutter.",
+        "about.p2": "Atualmente foco no ecossistema moderno de desenvolvimento (React, Node.js, Flutter). Sou graduado em Análise e Desenvolvimento de Sistemas pela Estácio.",
         "about.skills": "Minhas Tecnologias",
 
         // Experience
@@ -65,8 +65,8 @@ const translations = {
         "projects.title": "Projetos Selecionados",
         "projects.subtitle": "Alguns dos trabalhos que desenvolvi recentemente.",
         "projects.nutrify.desc": "Plataforma de dietas personalizadas com IA e lógica nutricional validada. Integração com Mercado Pago e foco em UX.",
-        "projects.dashboard.desc": "Painel administrativo para gestão de dietas, usuários e conteúdo do Nutrify.",
-        "projects.social.desc": "Interface moderna para aplicação social com foco em experiência mobile.",
+        "projects.nutrify_mobile.desc": "Aplicativo mobile multiplataforma para acompanhamento de dietas, com scanner de refeições via IA e integração em tempo real com o servidor.",
+        "projects.dashboard.desc": "Painel administrativo avançado com rastreamento de métricas, performance de anúncios (Meta Ads) e insights estratégicos gerados por IA.",
 
         // Contact
         "contact.title": "Vamos construir algo juntos?",
@@ -84,14 +84,14 @@ const translations = {
 
         // Hero
         "hero.greeting": "Hi, I am",
-        "hero.role": "Fullstack Web Developer specialized in creating modern and scalable solutions.",
+        "hero.role": "Fullstack Web & Mobile Developer specialized in creating modern, scalable, and high-impact solutions.",
         "hero.projects": "View Projects",
         "hero.contact": "Get in touch",
 
         // About
         "about.title": "About me",
-        "about.p1": "I am a Fullstack Web Developer experienced in creating everything from interactive interfaces to robust systems. I have expertise in AI integration, payment gateways, and IT administration background.",
-        "about.p2": "Currently focused on React, Node.js, and the modern development ecosystem. Graduated in Systems Analysis and Development from Estácio.",
+        "about.p1": "I am a Fullstack Web and Mobile Developer experienced in creating everything from interactive interfaces to robust systems. I have expertise in AI integration, payment gateways, and cross-platform development with Flutter.",
+        "about.p2": "Currently focused on the modern development ecosystem (React, Node.js, Flutter). Graduated in Systems Analysis and Development from Estácio.",
         "about.skills": "My Tech Stack",
 
         // Experience
@@ -132,8 +132,8 @@ const translations = {
         "projects.title": "Selected Projects",
         "projects.subtitle": "Some of the work I've developed recently.",
         "projects.nutrify.desc": "Personalized diet platform with AI and validated nutritional logic. Mercado Pago integration and UX focus.",
-        "projects.dashboard.desc": "Administrative dashboard for managing diets, users, and Nutrify content.",
-        "projects.social.desc": "Modern interface for a social application focused on mobile experience.",
+        "projects.nutrify_mobile.desc": "Cross-platform mobile app for diet tracking, featuring AI meal scanning and real-time server integration.",
+        "projects.dashboard.desc": "Advanced administrative dashboard with metrics tracking, ad performance (Meta Ads), and strategic AI-generated insights.",
 
         // Contact
         "contact.title": "Let's build something together?",
