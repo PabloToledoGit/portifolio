@@ -435,7 +435,6 @@ export const translations = {
             cluster: {
                 explore_work: 'Explorar trabalho',
                 technical_depth: 'Profundidade técnica',
-                product_thinking: 'Pensamento de produto',
                 current_role: 'Cargo atual',
             },
             prompt: {
@@ -445,9 +444,6 @@ export const translations = {
                 stack: 'Explicar meu stack',
                 backend: 'Experiência em backend',
                 dashboard: 'Como funciona o dashboard ao vivo?',
-                portfolio_different: 'O que torna este portfólio diferente?',
-                business_projects: 'Projetos orientados a negócio',
-                product_engineering: 'Como conecto produto e engenharia?',
                 current_role: 'Sobre meu cargo atual',
                 mobile: 'Experiência com mobile',
                 building_now: 'O que estou construindo agora?',
@@ -1001,7 +997,6 @@ export const translations = {
             cluster: {
                 explore_work: 'Explore work',
                 technical_depth: 'Technical depth',
-                product_thinking: 'Product thinking',
                 current_role: 'Current role',
             },
             prompt: {
@@ -1011,9 +1006,6 @@ export const translations = {
                 stack: 'Explain my stack',
                 backend: 'Backend experience',
                 dashboard: 'How does the live dashboard work?',
-                portfolio_different: 'What makes this portfolio different?',
-                business_projects: 'Business-oriented projects',
-                product_engineering: 'How do I connect product and engineering?',
                 current_role: 'About my current role',
                 mobile: 'Mobile experience',
                 building_now: 'What am I building now?',
@@ -1214,9 +1206,8 @@ export type TranslationKeys =
     | 'guide.label' | 'guide.title' | 'guide.subtitle' | 'guide.description' | 'guide.signal_1' | 'guide.signal_2' | 'guide.signal_3'
     | 'guide.launch' | 'guide.launch_label' | 'guide.empty_state' | 'guide.loading' | 'guide.insight_title' | 'guide.mode_live' | 'guide.mode_curated'
     | 'guide.security_signal' | 'guide.resilience_signal'
-    | 'guide.cluster.explore_work' | 'guide.cluster.technical_depth' | 'guide.cluster.product_thinking' | 'guide.cluster.current_role'
+    | 'guide.cluster.explore_work' | 'guide.cluster.technical_depth' | 'guide.cluster.current_role'
     | 'guide.prompt.projects_main' | 'guide.prompt.nutrify' | 'guide.prompt.saas_systems' | 'guide.prompt.stack' | 'guide.prompt.backend' | 'guide.prompt.dashboard'
-    | 'guide.prompt.portfolio_different' | 'guide.prompt.business_projects' | 'guide.prompt.product_engineering'
     | 'guide.prompt.current_role' | 'guide.prompt.mobile' | 'guide.prompt.building_now'
     | 'guide.runtime.init' | 'guide.runtime.init_desc' | 'guide.runtime.backend' | 'guide.runtime.backend_desc'
     | 'guide.runtime.validation' | 'guide.runtime.validation_desc' | 'guide.runtime.ready' | 'guide.runtime.ready_desc'

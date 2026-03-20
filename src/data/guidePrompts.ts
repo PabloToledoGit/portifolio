@@ -3,7 +3,7 @@
  * Organized by recruiter-oriented categories.
  */
 
-export type PromptClusterId = 'explore_work' | 'technical_depth' | 'product_thinking' | 'current_role';
+export type PromptClusterId = 'explore_work' | 'technical_depth' | 'current_role';
 
 export interface PromptCluster {
   id: PromptClusterId;
@@ -28,15 +28,6 @@ export const guidePromptClusters: PromptCluster[] = [
       'guide.prompt.stack',
       'guide.prompt.backend',
       'guide.prompt.dashboard',
-    ],
-  },
-  {
-    id: 'product_thinking',
-    labelKey: 'guide.cluster.product_thinking',
-    prompts: [
-      'guide.prompt.portfolio_different',
-      'guide.prompt.business_projects',
-      'guide.prompt.product_engineering',
     ],
   },
   {
