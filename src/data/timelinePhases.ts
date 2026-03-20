@@ -137,7 +137,7 @@ export const timelinePhases: TimelinePhase[] = [
     detailContextKey: 'timeline.phase_sigbl_milk_bank.context',
     detailChallengeKey: 'timeline.phase_sigbl_milk_bank.challenge',
     detailEvolutionKey: 'timeline.phase_sigbl_milk_bank.evolution',
-    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'API-ready'],
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Flutter', 'Node.js', 'API'],
     milestoneRef: 'experience.sigbl',
   },
 ];

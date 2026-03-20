@@ -66,7 +66,7 @@ export const Projects = () => {
       id: 'sigbl',
       title: t('projects.sigbl.title'),
       description: t('projects.sigbl.description'),
-      stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js'],
+      stack: ['React', 'TypeScript', 'Tailwind', 'Flutter', 'Node.js', 'API'],
       impact: [
         t('projects.sigbl.impact_line_1'),
         t('projects.sigbl.impact_line_2'),

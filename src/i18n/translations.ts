@@ -81,10 +81,10 @@ export const translations = {
                 description: 'Automação de workflows internos e gestão de infraestrutura.',
             },
             sigbl: {
-                role: 'Arquiteto & desenvolvedor (produto em construção)',
+                role: 'Arquiteto & desenvolvedor (ecossistema em construção)',
                 company: 'SIGBL — Banco de Leite Humano',
                 period: 'Em desenvolvimento',
-                description: 'Plataforma digital para gestão operacional de banco de leite humano, com foco em implementação real em Volta Redonda (RJ).',
+                description: 'Ecossistema digital: painel web administrativo + app mobile para doadoras + API/backend — em implementação real em Volta Redonda (RJ).',
             },
         },
         projects: {
@@ -95,8 +95,12 @@ export const translations = {
             problem: 'O Problema',
             solution: 'A Solução',
             results: 'Resultados',
-            modal_architecture: 'Arquitetura e decisões técnicas',
-            modal_features: 'Funcionalidades principais',
+            modal_overview: 'Visão geral do produto',
+            modal_architecture: 'Arquitetura do sistema',
+            modal_user_flows: 'Fluxos e integração (web + mobile + API)',
+            modal_features: 'Funcionalidades por camada',
+            modal_technical: 'Decisões técnicas',
+            modal_impact: 'Impacto',
             modal_status_next: 'Estado atual e próximos passos',
             nutrify_web: {
                 title: 'Nutrify Web',
@@ -122,28 +126,34 @@ export const translations = {
             sigbl: {
                 title: 'SIGBL — Sistema Integrado de Gestão do Banco de Leite',
                 description:
-                    'Plataforma para gerir, otimizar e digitalizar operações de banco de leite humano: rastreio de doadoras, estoque e fluxos de trabalho. Produto real em desenvolvimento, preparado para uso institucional.',
+                    'Produto completo em desenvolvimento: painel web administrativo (operação e dados) + aplicativo mobile para doadoras + camada backend/API que integra os dois. Pensado para uso institucional real em banco de leite humano.',
                 status_badge: 'Em desenvolvimento',
-                category_tag: 'Saúde · Impacto social',
+                category_tag: 'Saúde · Web + Mobile + API',
                 highlight:
-                    'Em preparação para implementação em um banco de leite humano real em Volta Redonda (RJ). Não é conceito acadêmico: é sistema pensado para operação e escala.',
+                    'Objetivo de implementação em banco de leite humano real em Volta Redonda (RJ). Ecossistema conectado — não é apenas um painel nem um app isolado: backend centraliza dados, autenticação e consistência entre equipe e doadoras.',
                 media_short: 'SIGBL',
                 meta_aria: 'Status e categoria do projeto',
-                impact_line_1: 'Impacto social: saúde materno-infantil',
-                impact_line_2: 'Arquitetura modular e escalável',
-                impact_line_3: 'Pronto para integrações futuras (ex.: sistemas de saúde)',
+                impact_line_1: 'Ecossistema: dashboard + app doadoras + API',
+                impact_line_2: 'Impacto social e eficiência operacional',
+                impact_line_3: 'Estrutura escalável para outros bancos de leite',
+                case_product_overview:
+                    'O SIGBL é posicionado como ecossistema digital: (1) Dashboard web — painel profissional para equipe de saúde e administradores: gestão de doadoras, coletas, estoque, fluxos, analytics e relatórios; tom institucional, orientado a dados. (2) App mobile (Flutter) — experiência humana e acessível para mães/doadoras: cadastro, acompanhamento de doações, notificações, agendamentos e engajamento. (3) Backend (Node.js / API em evolução) — camada central para sincronização, autenticação, regras de negócio e consistência entre canais.',
                 case_problem:
-                    'Operações de banco de leite muitas vezes dependem de processos manuais ou ferramentas fragmentadas, gerando ineficiência, pouca visibilidade e dificuldade para rastrear doadoras, coletas e estoque com segurança e rastreabilidade.',
+                    'Bancos de leite frequentemente operam com processos manuais ou ferramentas desconectadas: pouca visibilidade sobre doadoras e estoque, comunicação frágil com quem doa e dificuldade de rastreabilidade e auditoria em escala.',
                 case_solution:
-                    'O SIGBL centraliza a operação numa única plataforma web: cadastro e gestão de doadoras, registro de coletas, controle de inventário, fluxos administrativos e painéis para apoio à decisão. Arquitetura modular por funcionalidades, código sustentável e preparação para camada backend/API e expansão mobile (ex.: Flutter), alinhada a requisitos reais de saúde.',
-                case_results:
-                    'Potencial de melhorar eficiência operacional, rastreabilidade e engajamento de doadoras; reduzir retrabalho manual; e apoiar profissionais de saúde com dados mais claros. O objetivo é adoção institucional com impacto direto na qualidade do serviço ao recém-nascido e à família.',
+                    'Unificar operação num sistema integrado: o app mobile captura e atualiza o lado da doadora; a API persiste e orquestra dados; o dashboard web consolida visão operacional para a equipe — fluxos administrativos, inventário, logs e relatórios num único desenho de produto, modular e escalável.',
                 case_architecture:
-                    'Frontend em React (Vite) e TypeScript, estilização com Tailwind CSS, organização por features para manter o domínio (doadoras, coletas, estoque, relatórios) explícito e evolutivo. Camada de API e persistência em evolução (Node.js), pensada para integrações futuras com sistemas hospitalares ou protocolos institucionais.',
+                    'Três faces do mesmo produto: cliente web administrativo em React (Vite), TypeScript e Tailwind — layout estruturado e confiável para rotina hospitalar; cliente mobile em Flutter — UI simples e acolhedora para doadoras; servidor em Node.js (planejado/em construção) expondo API REST, responsável por autenticação, sincronização de dados, workflows e extensão futura (tempo real ou filas conforme necessidade). Organização por features no front web para refletir domínio (doadoras, coletas, estoque, relatórios).',
+                case_user_flows:
+                    'Exemplo de fluxo ponta a ponta: (1) Doadora registra-se ou atualiza perfil pelo app mobile. (2) Dados são enviados à API e persistidos. (3) O dashboard web exibe a doadora e o histórico para a equipe. (4) A equipe registra coleta ou atualiza status no painel. (5) Estoque e métricas refletem a alteração (base para atualizações em tempo real). (6) A doadora recebe notificação ou lembrete no app. Esse ciclo comunica produto completo, não módulos soltos.',
                 case_features:
-                    'Gestão de doadoras; rastreio de coletas de leite; controle e monitoramento de estoque; gestão de fluxos e processos; painel administrativo; visualização de dados e relatórios; base para analytics operacional; espaço para evolução com gamificação voltada ao engajamento de doadoras (opcional, ética e compliance em primeiro lugar).',
+                    'Painel web: gestão de doadoras; rastreio de coletas; controle de inventário; workflows administrativos; analytics e relatórios; logs e rastreabilidade de atividades. App mobile: onboarding de doadora; acompanhamento de doações; notificações e lembretes; agendamento de coleta/entrega; espaço para conteúdo educativo opcional. Sistema: fluxo de dados centralizado na API; evolução para atualizações em tempo real onde fizer sentido clínico-operacional.',
+                case_technical:
+                    'Modularidade e feature-based structure no web; contratos de API explícitos entre mobile e backend; separação clara de papéis (operador vs doadora); preparação para hardening de segurança, LGPD e requisitos institucionais de saúde; possibilidade de escalar o mesmo modelo para outras unidades de banco de leite.',
+                case_results:
+                    'Impacto social direto em saúde materno-infantil; ganho de eficiência e visibilidade operacional; comunicação mais clara entre instituição e doadoras; rastreabilidade para decisões clínicas e administrativas; produto replicável como referência para outros bancos de leite.',
                 case_status_next:
-                    'Status: em desenvolvimento ativo. Próximos passos: validação com o banco de leite humano de Volta Redonda, refinamento de fluxos clínicos e administrativos, endurecimento de segurança e privacidade de dados, piloto controlado e evolução da API para integrações.',
+                    'Em desenvolvimento ativo. Próximos passos: alinhar requisitos com o banco de leite humano de Volta Redonda, validar fluxos no app e no painel, fechar contratos de API críticos, reforçar segurança e privacidade, piloto controlado e iteração com usuários reais (equipe e doadoras).',
             },
             secret: {
                 title: 'Visão de Arquitetura',
@@ -248,8 +258,8 @@ export const translations = {
                 },
                 social_impact: {
                     title: 'Sistema de impacto social',
-                    description: 'Você abriu o case study do SIGBL — plataforma em desenvolvimento para banco de leite humano.',
-                    why: 'Mostra construção de produtos com relevância institucional e impacto em saúde, além de código comercial.',
+                    description: 'Você explorou o case do SIGBL — ecossistema com painel web, app para doadoras e API em desenvolvimento.',
+                    why: 'Evidencia produto multiplataforma, uso institucional real e impacto em saúde materno-infantil.',
                 },
             },
         },
@@ -326,10 +336,10 @@ export const translations = {
             },
             phase_sigbl_milk_bank: {
                 title: 'Sistemas de saúde e impacto social (SIGBL)',
-                summary: 'Plataforma em desenvolvimento para gestão de banco de leite humano.',
-                context: 'Construção do SIGBL — Sistema Integrado de Gestão do Banco de Leite — voltado a operações reais: doadoras, coletas, estoque e fluxos administrativos, com foco em implementação em banco de leite humano em Volta Redonda (RJ).',
-                challenge: 'Traduzir processos clínicos e administrativos em software confiável, seguro e adotável por instituições.',
-                evolution: 'Ampliação do portfólio para produtos com impacto social direto e requisitos de governança e escala.',
+                summary: 'Ecossistema web + mobile + API para banco de leite humano.',
+                context: 'SIGBL combina dashboard administrativo (React), app Flutter para doadoras e backend Node/API em evolução, com foco em implementação real em Volta Redonda (RJ).',
+                challenge: 'Entregar produto multiplataforma alinhado a processos de saúde, privacidade e operação institucional.',
+                evolution: 'Demonstração de visão de produto completo — não só feature isolada, mas sistema conectado com impacto social.',
             },
             phase_complex: {
                 title: 'Desenvolvimento multi-sistema e ecossistema SaaS',
@@ -543,7 +553,7 @@ export const translations = {
             topic_dashboard_explain: 'dashboard_explain',
             topic_fallback: 'fallback',
             response_projects_main_title: 'Principais Projetos',
-            response_projects_main_body: 'Os projetos em destaque incluem: Nutrify Web (planos nutricionais com IA e checkout Mercado Pago), Nutrify Mobile (Flutter com Visão Computacional), Dashboard Avançado (métricas em tempo real) e o SIGBL — Sistema Integrado de Gestão do Banco de Leite (plataforma em desenvolvimento para operação real de banco de leite humano, com implementação prevista em Volta Redonda, RJ). Cada um endereça um problema concreto com stack e arquitetura adequadas.',
+            response_projects_main_body: 'Os projetos em destaque incluem: Nutrify Web, Nutrify Mobile (Flutter), Dashboard Avançado e o SIGBL — ecossistema em desenvolvimento com painel web administrativo, app mobile para doadoras (Flutter) e API/backend (Node) para banco de leite humano, com implementação alvo em Volta Redonda (RJ). Cada um endereça um problema concreto com stack adequada.',
             response_stack_title: 'Stack Técnico',
             response_stack_body: 'Frontend: React, TypeScript, Framer Motion. Backend: Node.js, REST APIs, Webhooks. Mobile: Flutter, Dart. IA: OpenAI API, integrações. Infra: automação, workflows. Pagamentos: Mercado Pago. Foco em ecossistemas de alto desempenho e sistemas escaláveis.',
             response_nutrify_title: 'Nutrify',
@@ -554,9 +564,9 @@ export const translations = {
             response_business_results_body: 'Faturamento acima de R$ 150k no Nutrify. Liderança de equipe de 6 pessoas. Zero falhas de integração em processamento de pagamentos. Centralização de dados de marketing para decisões baseadas em ROI. Produtos que escalam e geram valor recorrente.',
             response_strongest_area_title: 'Área de Destaque',
             response_strongest_area_body: 'Arquitetura de sistemas que combinam frontend performático, backend robusto, integrações críticas (pagamentos, IA) e dados em tempo real. Visão de produto: entender o problema, escolher a stack e entregar impacto mensurável.',
-            response_sigbl_title: 'SIGBL — Banco de leite humano',
+            response_sigbl_title: 'SIGBL — Ecossistema banco de leite',
             response_sigbl_body:
-                'É um sistema real em desenvolvimento (não é mock acadêmico): o SIGBL — Sistema Integrado de Gestão do Banco de Leite — digitaliza e organiza operações de banco de leite humano (doadoras, coletas, estoque, fluxos administrativos e relatórios). Está sendo preparado para implementação junto a um banco de leite humano local em Volta Redonda (RJ). Stack: React (Vite), TypeScript, Tailwind; arquitetura modular; evolução prevista com API/Node e possível app Flutter. Objetivo: eficiência, rastreabilidade e impacto social em saúde materno-infantil.',
+                'O SIGBL é um produto completo em desenvolvimento (não é protótipo solto): inclui (1) dashboard web para equipe de saúde e administradores — doadoras, coletas, estoque, fluxos, analytics; (2) app mobile em Flutter para doadoras — cadastro, acompanhamento, notificações e agendamentos; (3) backend/API em Node.js em evolução — dados, autenticação e sincronização entre app e painel. Fluxo típico: doadora usa o app → API persiste → dashboard mostra dados → equipe atualiza coleta/estoque → doadora pode ser notificada. Implementação alvo: banco de leite humano em Volta Redonda (RJ). Objetivo: eficiência, rastreabilidade, comunicação institucional e impacto social.',
             response_portfolio_different_title: 'O que torna este portfólio diferente',
             response_portfolio_different_body: 'Comporta-se como um produto: assistente integrado, timeline narrativa interativa, dashboard simulado e gamificação sutil. Demonstra pensamento de produto, não apenas listagem de projetos. Cada seção comunica decisões técnicas e resultados de negócio.',
             response_dashboard_explain_title: 'Sobre o painel',
@@ -696,10 +706,10 @@ export const translations = {
                 description: 'Automation of internal workflows and infrastructure management.',
             },
             sigbl: {
-                role: 'Architect & developer (product in development)',
+                role: 'Architect & developer (ecosystem in development)',
                 company: 'SIGBL — Human Milk Bank',
                 period: 'In development',
-                description: 'Digital platform for human milk bank operations, focused on real-world rollout in Volta Redonda, Brazil.',
+                description: 'Full product: admin web dashboard + donor mobile app + API/backend — targeting real rollout in Volta Redonda, Brazil.',
             },
         },
         projects: {
@@ -710,8 +720,12 @@ export const translations = {
             problem: 'The Problem',
             solution: 'The Solution',
             results: 'Results',
-            modal_architecture: 'Architecture & technical decisions',
-            modal_features: 'Core features',
+            modal_overview: 'Product overview',
+            modal_architecture: 'System architecture',
+            modal_user_flows: 'Flows & integration (web + mobile + API)',
+            modal_features: 'Features by layer',
+            modal_technical: 'Technical decisions',
+            modal_impact: 'Impact',
             modal_status_next: 'Current status & next steps',
             nutrify_web: {
                 title: 'Nutrify Web',
@@ -737,28 +751,34 @@ export const translations = {
             sigbl: {
                 title: 'SIGBL — Integrated Human Milk Bank Management System',
                 description:
-                    'A platform to manage, optimize, and digitize human milk bank operations: donor tracking, inventory, and workflows. A real product in development, designed for institutional deployment.',
+                    'A full product in development: administrative web dashboard + donor-facing mobile app + central backend/API. Built for real institutional use at a human milk bank.',
                 status_badge: 'In development',
-                category_tag: 'Healthcare · Social impact',
+                category_tag: 'Healthcare · Web + Mobile + API',
                 highlight:
-                    'Being prepared for implementation at a real human milk bank in Volta Redonda, RJ, Brazil. Not an academic mock — built for real operations and scale.',
+                    'Targeted for rollout with a real human milk bank in Volta Redonda, RJ, Brazil. A connected ecosystem — not a lone admin panel or a standalone app: the backend ties staff workflows and donor experiences together.',
                 media_short: 'SIGBL',
                 meta_aria: 'Project status and category',
-                impact_line_1: 'Social impact: maternal & infant health',
-                impact_line_2: 'Modular, scalable architecture',
-                impact_line_3: 'Ready for future integrations (e.g. health systems)',
+                impact_line_1: 'Ecosystem: dashboard + donor app + API',
+                impact_line_2: 'Social impact & operational efficiency',
+                impact_line_3: 'Scalable pattern for other milk banks',
+                case_product_overview:
+                    'SIGBL is positioned as a digital ecosystem: (1) Web dashboard — a professional control plane for healthcare staff and administrators: donor records, collections, inventory, workflows, analytics, and reporting; structured, data-driven, institutional tone. (2) Mobile app (Flutter) — a human, accessible experience for donor mothers: registration, donation tracking, notifications, scheduling, and optional education. (3) Backend (Node.js / API in progress) — the central layer for synchronization, authentication, business rules, and consistency across channels.',
                 case_problem:
-                    'Milk bank operations often rely on manual steps or fragmented tools, causing inefficiency, limited visibility, and difficulty tracking donors, collections, and inventory with full traceability.',
+                    'Milk banks often run on manual steps or disconnected tools: limited visibility into donors and inventory, weak communication with people who donate milk, and hard-to-audit traceability at scale.',
                 case_solution:
-                    'SIGBL centralizes operations in one web platform: donor management, collection logging, inventory control, administrative workflows, and decision-oriented dashboards. Feature-based modular architecture, maintainable codebase, and an evolving API layer (Node.js) with optional mobile expansion (e.g. Flutter), aligned with real healthcare constraints.',
-                case_results:
-                    'Potential to improve operational efficiency, traceability, and donor engagement; reduce manual rework; and support clinical staff with clearer data. Goal: institutional adoption with direct impact on service quality for newborns and families.',
+                    'One integrated product: the mobile app captures the donor side; the API stores and orchestrates data; the web dashboard gives staff operational visibility — collections, inventory, admin flows, logs, and reporting in a single product design that is modular and scalable.',
                 case_architecture:
-                    'Frontend: React (Vite), TypeScript, Tailwind CSS; structure organized by features so domains (donors, collections, inventory, reporting) stay explicit and evolvable. Backend/API and persistence in progress, designed for future integration with hospital systems or institutional protocols.',
+                    'Three surfaces of the same system: administrative web client in React (Vite), TypeScript, and Tailwind — reliable layouts for daily hospital operations; mobile client in Flutter — simple, supportive UI for donors; Node.js server (planned / under development) exposing a REST API for auth, data sync, workflows, and future real-time or queue-based patterns where needed. Feature-based structure on the web to reflect domain (donors, collections, inventory, reporting).',
+                case_user_flows:
+                    'End-to-end example: (1) A donor registers or updates her profile in the mobile app. (2) Data is sent to the API and persisted. (3) The web dashboard shows the donor and history to staff. (4) Staff log a collection or update status in the dashboard. (5) Inventory and metrics reflect the change (foundation for real-time updates). (6) The donor receives a notification or reminder in the app. This loop signals a full product, not isolated modules.',
                 case_features:
-                    'Donor management; milk collection tracking; inventory monitoring; workflow and process management; administrative dashboard; data visualization and reporting; foundation for operational analytics; optional path for ethical donor-engagement patterns (compliance first).',
+                    'Dashboard: donor management; collection tracking; inventory control; admin workflows; operational analytics; activity logs; reporting and visualization. Mobile app: donor onboarding; donation tracking; notifications and reminders; scheduling for collection or drop-off; optional educational content. System: centralized data flow through the API; evolution toward real-time updates where clinically and operationally appropriate.',
+                case_technical:
+                    'Modularity and feature-based boundaries on the web; explicit API contracts between mobile and backend; clear separation of operator vs donor roles; groundwork for security, privacy, and healthcare-grade requirements; architecture that can scale to additional milk bank units.',
+                case_results:
+                    'Direct social impact on maternal and infant health; better operational visibility and efficiency; clearer communication between institution and donors; traceability for clinical and admin decisions; a repeatable model for other milk banks.',
                 case_status_next:
-                    'Status: active development. Next steps: validation with the Volta Redonda human milk bank, refinement of clinical and admin flows, stronger security and privacy, controlled pilot, and API evolution for integrations.',
+                    'Active development. Next: align requirements with the Volta Redonda human milk bank, validate flows on both app and dashboard, harden critical API paths, strengthen security and privacy, run a controlled pilot, and iterate with real users (staff and donors).',
             },
             secret: {
                 title: 'Architecture Vision',
@@ -863,8 +883,8 @@ export const translations = {
                 },
                 social_impact: {
                     title: 'Social-impact system',
-                    description: 'You opened the SIGBL case study — a human milk bank platform in active development.',
-                    why: 'Shows you build institution-facing products with real-world and public-health relevance.',
+                    description: 'You opened the SIGBL case — ecosystem with web dashboard, donor app, and API in development.',
+                    why: 'Highlights multi-platform delivery, institutional use cases, and maternal/infant health impact.',
                 },
             },
         },
@@ -941,10 +961,10 @@ export const translations = {
             },
             phase_sigbl_milk_bank: {
                 title: 'Healthcare systems & social impact (SIGBL)',
-                summary: 'Platform in development for human milk bank operations.',
-                context: 'Building SIGBL — Integrated Human Milk Bank Management System — for real-world operations: donors, collections, inventory, and admin workflows, targeting implementation with a human milk bank in Volta Redonda, Brazil.',
-                challenge: 'Turning clinical and administrative processes into trustworthy, secure, institution-ready software.',
-                evolution: 'Extending the portfolio toward products with direct social impact and governance-grade requirements.',
+                summary: 'Web + mobile + API ecosystem for human milk banks.',
+                context: 'SIGBL combines an admin dashboard (React), a Flutter donor app, and an evolving Node/API backend, targeting real deployment in Volta Redonda, Brazil.',
+                challenge: 'Shipping a multi-platform product that fits health workflows, privacy, and institutional operations.',
+                evolution: 'Shows end-to-end product thinking — connected systems with social impact, not a single screen or demo.',
             },
             phase_complex: {
                 title: 'Multi-system development and SaaS ecosystem',
@@ -1158,7 +1178,7 @@ export const translations = {
             topic_dashboard_explain: 'dashboard_explain',
             topic_fallback: 'fallback',
             response_projects_main_title: 'Main Projects',
-            response_projects_main_body: 'Featured work includes: Nutrify Web (AI nutrition plans and Mercado Pago checkout), Nutrify Mobile (Flutter with Computer Vision), Advanced Dashboard (real-time ad metrics via WebSockets), and SIGBL — Integrated Human Milk Bank Management System (in development for real milk-bank operations, targeting implementation in Volta Redonda, Brazil). Each addresses a concrete problem with appropriate stack and architecture.',
+            response_projects_main_body: 'Featured work includes: Nutrify Web, Nutrify Mobile (Flutter), Advanced Dashboard, and SIGBL — a full product in development: admin web dashboard, Flutter donor app, and Node/API backend for human milk bank operations, targeting Volta Redonda, Brazil. Each addresses a concrete problem with the right stack.',
             response_stack_title: 'Technical Stack',
             response_stack_body: 'Frontend: React, TypeScript, Framer Motion. Backend: Node.js, REST APIs, Webhooks. Mobile: Flutter, Dart. AI: OpenAI API, integrations. Infra: automation, workflows. Payments: Mercado Pago. Focus on high-performance ecosystems and scalable systems.',
             response_nutrify_title: 'Nutrify',
@@ -1169,9 +1189,9 @@ export const translations = {
             response_business_results_body: 'Revenue above $30k at Nutrify. Leading a team of 6. Zero integration failures in payment processing. Centralization of marketing data for ROI-based decisions. Products that scale and generate recurring value.',
             response_strongest_area_title: 'Strongest Area',
             response_strongest_area_body: 'Architecture of systems that combine performant frontend, robust backend, critical integrations (payments, AI), and real-time data. Product vision: understand the problem, choose the stack, and deliver measurable impact.',
-            response_sigbl_title: 'SIGBL — Human milk bank system',
+            response_sigbl_title: 'SIGBL — Milk bank ecosystem',
             response_sigbl_body:
-                'SIGBL (Sistema Integrado de Gestão do Banco de Leite) is a real product in development — not a classroom mock. It is a web platform to digitize and streamline human milk bank operations: donors, collections, inventory, admin workflows, and reporting. It is being prepared for use with a local human milk bank in Volta Redonda, RJ, Brazil. Stack: React (Vite), TypeScript, Tailwind; modular feature-based architecture; evolving Node/API layer and potential Flutter expansion. Goal: efficiency, traceability, and social impact on maternal and infant health.',
+                'SIGBL is a complete product in development: (1) a web dashboard for healthcare staff and admins — donors, collections, inventory, workflows, analytics; (2) a Flutter mobile app for donor mothers — signup, donation tracking, notifications, scheduling; (3) a Node.js/API backend in progress — authentication, data sync, and consistency between app and dashboard. Typical flow: donor acts in the app → API stores data → dashboard reflects it → staff updates collection/inventory → donor can be notified. Target: a real human milk bank in Volta Redonda, RJ, Brazil. Yes, it includes mobile; dashboard and app are intentionally connected, not separate prototypes.',
             response_portfolio_different_title: 'What makes this portfolio different',
             response_portfolio_different_body: 'Behaves like a product: integrated assistant, interactive narrative timeline, simulated dashboard, and subtle gamification. Demonstrates product thinking, not just project listing. Each section communicates technical decisions and business results.',
             response_dashboard_explain_title: 'About the panel',
@@ -1249,7 +1269,8 @@ export type TranslationKeys =
     | 'experience.sarton.role' | 'experience.sarton.company' | 'experience.sarton.period' | 'experience.sarton.description'
     | 'experience.sigbl.role' | 'experience.sigbl.company' | 'experience.sigbl.period' | 'experience.sigbl.description'
     | 'projects.title' | 'projects.subtitle' | 'projects.view_case' | 'projects.close' | 'projects.problem' | 'projects.solution' | 'projects.results'
-    | 'projects.modal_architecture' | 'projects.modal_features' | 'projects.modal_status_next'
+    | 'projects.modal_overview' | 'projects.modal_architecture' | 'projects.modal_user_flows' | 'projects.modal_features'
+    | 'projects.modal_technical' | 'projects.modal_impact' | 'projects.modal_status_next'
     | 'projects.nutrify_web.title' | 'projects.nutrify_web.description'
     | 'projects.nutrify_web.case_problem' | 'projects.nutrify_web.case_solution' | 'projects.nutrify_web.case_results'
     | 'projects.nutrify_mobile.title' | 'projects.nutrify_mobile.description'
@@ -1259,8 +1280,9 @@ export type TranslationKeys =
     | 'projects.sigbl.title' | 'projects.sigbl.description' | 'projects.sigbl.status_badge' | 'projects.sigbl.category_tag'
     | 'projects.sigbl.highlight' | 'projects.sigbl.media_short' | 'projects.sigbl.meta_aria'
     | 'projects.sigbl.impact_line_1' | 'projects.sigbl.impact_line_2' | 'projects.sigbl.impact_line_3'
-    | 'projects.sigbl.case_problem' | 'projects.sigbl.case_solution' | 'projects.sigbl.case_results'
-    | 'projects.sigbl.case_architecture' | 'projects.sigbl.case_features' | 'projects.sigbl.case_status_next'
+    | 'projects.sigbl.case_product_overview' | 'projects.sigbl.case_problem' | 'projects.sigbl.case_solution' | 'projects.sigbl.case_results'
+    | 'projects.sigbl.case_architecture' | 'projects.sigbl.case_user_flows' | 'projects.sigbl.case_features' | 'projects.sigbl.case_technical'
+    | 'projects.sigbl.case_status_next'
     | 'projects.secret.title' | 'projects.secret.description'
     | 'projects.secret.case_problem' | 'projects.secret.case_solution' | 'projects.secret.case_results'
     | 'contact.title' | 'contact.eyebrow' | 'contact.headline' | 'contact.lead'

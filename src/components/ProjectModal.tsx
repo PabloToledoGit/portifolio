@@ -33,6 +33,8 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
     if (!project) return null;
 
+    const isSigbl = project.id === 'sigbl';
+
     return (
         <AnimatePresence>
             {project && (
@@ -51,41 +53,71 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                         <div className="modal-content">
                             <header className="modal-header">
                                 <div className="modal-tags">
-                                    {project.stack.map(tag => <span key={tag} className="tag">{tag}</span>)}
+                                    {project.stack.map((tag) => (
+                                        <span key={tag} className="tag">
+                                            {tag}
+                                        </span>
+                                    ))}
                                 </div>
                                 <h2 className="modal-title">{project.title}</h2>
                                 <p className="modal-desc">{project.description}</p>
                             </header>
 
                             <div className="modal-body">
-                                <section className="modal-section">
-                                    <h3 className="section-subtitle">{t('projects.problem')}</h3>
-                                    <p>{t(`projects.${project.id}.case_problem` as TranslationKeys)}</p>
-                                </section>
-
-                                <section className="modal-section">
-                                    <h3 className="section-subtitle">{t('projects.solution')}</h3>
-                                    <p>{t(`projects.${project.id}.case_solution` as TranslationKeys)}</p>
-                                </section>
-
-                                <section className="modal-section">
-                                    <h3 className="section-subtitle">{t('projects.results')}</h3>
-                                    <p>{t(`projects.${project.id}.case_results` as TranslationKeys)}</p>
-                                </section>
-
-                                {project.id === 'sigbl' && (
+                                {isSigbl ? (
                                     <>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.modal_overview')}</h3>
+                                            <p>{t('projects.sigbl.case_product_overview')}</p>
+                                        </section>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.problem')}</h3>
+                                            <p>{t('projects.sigbl.case_problem')}</p>
+                                        </section>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.solution')}</h3>
+                                            <p>{t('projects.sigbl.case_solution')}</p>
+                                        </section>
                                         <section className="modal-section">
                                             <h3 className="section-subtitle">{t('projects.modal_architecture')}</h3>
                                             <p>{t('projects.sigbl.case_architecture')}</p>
+                                        </section>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.modal_user_flows')}</h3>
+                                            <p>{t('projects.sigbl.case_user_flows')}</p>
                                         </section>
                                         <section className="modal-section">
                                             <h3 className="section-subtitle">{t('projects.modal_features')}</h3>
                                             <p>{t('projects.sigbl.case_features')}</p>
                                         </section>
                                         <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.modal_technical')}</h3>
+                                            <p>{t('projects.sigbl.case_technical')}</p>
+                                        </section>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.modal_impact')}</h3>
+                                            <p>{t('projects.sigbl.case_results')}</p>
+                                        </section>
+                                        <section className="modal-section">
                                             <h3 className="section-subtitle">{t('projects.modal_status_next')}</h3>
                                             <p>{t('projects.sigbl.case_status_next')}</p>
+                                        </section>
+                                    </>
+                                ) : (
+                                    <>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.problem')}</h3>
+                                            <p>{t(`projects.${project.id}.case_problem` as TranslationKeys)}</p>
+                                        </section>
+
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.solution')}</h3>
+                                            <p>{t(`projects.${project.id}.case_solution` as TranslationKeys)}</p>
+                                        </section>
+
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.results')}</h3>
+                                            <p>{t(`projects.${project.id}.case_results` as TranslationKeys)}</p>
                                         </section>
                                     </>
                                 )}
