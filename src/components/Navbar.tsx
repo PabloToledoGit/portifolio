@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { scrollToTop } from '../utils/smoothScroll';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Github, Linkedin, Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,15 +19,29 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: t('nav.about'), href: '#about' },
-    { name: t('nav.experience'), href: '#experience' },
+    { name: t('nav.guide'), href: '#guide' },
+    { name: t('nav.trajectory'), href: '#trajectory' },
     { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.console'), href: '#console' },
     { name: t('nav.contact'), href: '#contact' },
   ];
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
-        <a href="#" className="nav-logo">
+        <a
+          href="#"
+          className="nav-logo"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToTop();
+            try {
+              history.pushState(null, '', window.location.pathname + window.location.search);
+            } catch {
+              /* ignore */
+            }
+          }}
+        >
           Pablo Toledo<span className="logo-dot">.</span>
         </a>
 

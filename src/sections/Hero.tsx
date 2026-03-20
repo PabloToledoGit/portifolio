@@ -37,10 +37,6 @@ export const Hero = () => {
           initial="hidden"
           animate="show"
         >
-          <motion.div variants={item} className="hero-badge">
-            {t('hero.badge')}
-          </motion.div>
-
           <motion.h1 variants={item} className="hero-title text-balance">
             {t('hero.headline')}
           </motion.h1>
@@ -56,6 +52,9 @@ export const Hero = () => {
             </a>
             <a href="#contact" className="btn btn-secondary">
               {t('hero.cta_contact')}
+            </a>
+            <a href="#guide" className="btn btn-tertiary">
+              {t('hero.cta_explore')}
             </a>
           </motion.div>
 
@@ -86,20 +85,6 @@ export const Hero = () => {
 
         .hero-content {
           max-width: 900px;
-        }
-
-        .hero-badge {
-          display: inline-block;
-          font-size: 12px;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          font-weight: 700;
-          padding: 6px 14px;
-          background: var(--surface2);
-          border: 1px solid var(--border);
-          border-radius: var(--radius-full);
-          margin-bottom: var(--space-5);
-          color: var(--muted);
         }
 
         .hero-title {
@@ -152,6 +137,15 @@ export const Hero = () => {
         .btn-secondary:hover {
           background: var(--surface);
           border-color: var(--muted);
+        }
+
+        .btn-tertiary {
+          color: var(--muted);
+          font-size: 0.875rem;
+        }
+
+        .btn-tertiary:hover {
+          color: var(--text);
         }
 
         .hero-proof-grid {

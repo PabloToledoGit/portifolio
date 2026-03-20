@@ -15,6 +15,21 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Lenis: evita conflito com scroll-behavior CSS e altura presa ao viewport */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+html.lenis {
+    scroll-behavior: auto !important;
+}
+
+/* Âncoras: compensação da navbar em navegação nativa (URL com # ao abrir a página) */
+main section[id] {
+    scroll-margin-top: 5.75rem;
+}
+
 body {
     line-height: 1.5;
     overflow-x: hidden;

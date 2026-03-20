@@ -2,8 +2,10 @@ export const translations = {
     pt: {
         nav: {
             about: 'Sobre',
-            experience: 'Experiência',
+            guide: 'Guia',
+            trajectory: 'Trajetória',
             projects: 'Projetos',
+            console: 'Console',
             contact: 'Contato',
         },
         hero: {
@@ -12,6 +14,7 @@ export const translations = {
             subheadline: 'Desenvolvedor Fullstack focado em ecossistemas de alto desempenho (React, Node, Flutter) e IA.',
             cta_projects: 'Ver Projetos',
             cta_contact: 'Entrar em contato',
+            cta_explore: 'Explorar produto',
             proof: {
                 faturamento: '+R$ 150k faturamento',
                 disponibilidade: 'Consultoria & Build',
@@ -100,6 +103,13 @@ export const translations = {
                 case_solution: 'Desenvolvimento de app Flutter com camada de Visão Computacional (TensorFlow/MLKit) para identificação automática de alimentos via câmera.',
                 case_results: 'Melhoria significativa na experiência do usuário e precisão na identificação automática de alimentos.',
             },
+            secret: {
+                title: 'Visão de Arquitetura',
+                description: 'Conteúdo desbloqueado: visão de como sistemas SaaS reais são estruturados.',
+                case_problem: 'Este bloco é exibido quando você desbloqueia o badge SaaS Operator — explorando o assistente, abrindo case studies e simulando o dashboard.',
+                case_solution: 'Arquitetura event-driven: webhooks recebem eventos, filas processam jobs, métricas são atualizadas. O console simulado demonstra esse fluxo de forma didática.',
+                case_results: 'Comunicação de maturidade técnica: o recrutador vê que você entende sistemas em operação, não apenas interfaces.',
+            },
             dashboard: {
                 title: 'Dashboard Avançado',
                 description: 'Painel de administração com métricas de anúncios em tempo real.',
@@ -110,20 +120,458 @@ export const translations = {
         },
         contact: {
             title: 'Vamos Conversar',
-            headline: 'Pronto para construir algo excepcional?',
-            subtitle: 'Disponível para novos projetos e consultorias.',
-            email_copy: 'Copiar Email',
-            whatsapp: 'Chamar no WhatsApp',
+            eyebrow: 'Contato',
+            headline: 'Pronto para levar ideias a produtos reais e escaláveis?',
+            lead: 'Desenvolvimento orientado a produto: sistemas que rodam em produção, automações que reduzem retrabalho e interfaces que suportam negócio. Aberto a freelas, evolução de produto e parceria técnica.',
+            value_title: 'O que construo',
+            value_body: 'SaaS com pagamentos e webhooks, painéis operacionais, integrações com IA, apps mobile (Flutter) e fluxos automatizados ponta a ponta.',
+            work_title: 'Como trabalho',
+            work_body: 'Arquitetura pensada para escala, código sustentável e alinhamento contínuo — do escopo à entrega em ambiente real.',
+            projects_line: 'Experiência com produtos monetizados, dashboards, dados em tempo real e operação com usuários reais.',
+            availability: 'Atuo como desenvolvedor em ambiente profissional e mantém sistemas próprios em operação.',
+            trust_1: 'Sistemas em produção com pagamento, automação e IA',
+            trust_2: 'Stack: React, Node.js, Firebase, Flutter',
+            trust_3: 'Visão de produto — além de interface',
+            email_label: 'E-mail',
+            email_copy: 'Copiar',
+            email_send: 'Enviar e-mail',
+            whatsapp_label: 'WhatsApp',
+            whatsapp_desc: 'Canal direto para alinhar escopo, prazo e próximos passos.',
+            whatsapp_cta: 'Iniciar conversa',
+            project_card_title: 'Falar do seu projeto',
+            project_card_desc: 'Ideal para briefing inicial: objetivo, stack e expectativa de entrega.',
+            project_card_cta: 'Conversar agora',
+            copied: 'Copiado.',
+            bridge: 'Quer construir algo no nível do que você viu neste portfólio?',
+            whatsapp_prefill: 'Olá Pablo, vi seu portfólio e quero conversar sobre um projeto.',
         },
         footer: {
             rights: '© 2024 Pablo Toledo. Todos os direitos reservados.',
+        },
+        gamification: {
+            open_badges: 'Abrir conquistas',
+            achievements: 'Conquistas',
+            badge_explorer: 'Explorer',
+            badge_system_analyst: 'System Analyst',
+            badge_backend_detective: 'Backend Detective',
+            badge_product_mindset: 'Product Mindset',
+            badge_saas_operator: 'SaaS Operator',
+        },
+        exploration: {
+            open_panel: 'Ver progresso de exploração',
+            panel_title: 'Progresso de exploração',
+            exploration_progress: 'Seções exploradas',
+            insights_title: 'Insights desbloqueados',
+            insight_placeholder: 'Explore o portfólio para desbloquear.',
+            dismiss_toast: 'Fechar',
+            stage: {
+                initial: 'Exploração inicial',
+                awareness: 'Consciência do sistema',
+                understanding: 'Entendimento do produto',
+                full_context: 'Contexto completo',
+            },
+            section: {
+                trajectory: 'Trajetória',
+                projects: 'Projetos',
+                console: 'Console',
+                guide: 'Guia',
+            },
+            toast: {
+                trajectory_complete: 'Trajetória totalmente explorada.',
+                system_flow_understood: 'Fluxo do sistema compreendido.',
+                event_pipeline_observed: 'Pipeline de eventos observado.',
+                product_logic_recognized: 'Lógica de produto reconhecida.',
+                full_system_interaction: 'Interação completa com o sistema.',
+            },
+            insight: {
+                explorer: {
+                    title: 'Trajetória completa explorada',
+                    description: 'Você explorou todas as fases da trajetória profissional.',
+                    why: 'Reflete compreensão da evolução técnica e do perfil.',
+                },
+                system_analyst: {
+                    title: 'Fluxo do sistema compreendido',
+                    description: 'Você analisou um case study e observou como o fluxo do sistema é estruturado.',
+                    why: 'Demonstra capacidade de análise de arquitetura e decisões técnicas.',
+                },
+                backend_detective: {
+                    title: 'Pipeline de eventos observado',
+                    description: 'Você explorou o console operacional e observou como eventos fluem pelo sistema.',
+                    why: 'Reflete entendimento de orquestração backend e arquitetura event-driven.',
+                },
+                product_mindset: {
+                    title: 'Lógica de produto reconhecida',
+                    description: 'Você interagiu com o guia e explorou a lógica de produto por trás do portfólio.',
+                    why: 'Indica pensamento orientado a produto e experiência do usuário.',
+                },
+                saas_operator: {
+                    title: 'Interação completa com o sistema',
+                    description: 'Você simulou o fluxo de compra e analisou múltiplos cases, compreendendo o sistema como um todo.',
+                    why: 'Comunica maturidade em sistemas SaaS e visão de produto.',
+                },
+            },
+        },
+        timeline: {
+            title: 'Evolução',
+            subtitle: 'Da primeira linha ao produto em escala.',
+            placeholder_hint: 'Clique em uma fase para ver os detalhes',
+            label_context: 'Contexto',
+            label_challenge: 'Desafio',
+            label_evolution: 'Evolução',
+            phase_origins: {
+                title: 'Exposição precoce ao desenvolvimento web',
+                summary: 'HTML, CSS. Primeira exploração de como sites são construídos e estruturados.',
+                context: 'Primeiro contato com desenvolvimento web por volta dos 11 anos, explorando como sites são construídos e estruturados.',
+                challenge: 'Aprender sem orientação formal e compreender conceitos centrais da web.',
+                evolution: 'Desenvolvimento de familiaridade de longo prazo com tecnologias web e forte curiosidade técnica.',
+            },
+            phase_admin: {
+                title: 'Função administrativa com foco em suporte T.I.',
+                summary: 'Office Suite, Excel, suporte a sistemas e operações internas.',
+                context: 'Aos 18 anos (2023), início como assistente administrativo com responsabilidades em suporte T.I., uso de sistemas e operações internas.',
+                challenge: 'Lidar com workflows reais de negócio e apoiar operações técnicas.',
+                evolution: 'Transição de curiosidade para resolução prática de problemas em ambientes reais.',
+            },
+            phase_internal_systems: {
+                title: 'Primeiros sistemas internos e gestão de dados',
+                summary: 'PHP, MySQL. Sistemas para processos e dados da empresa.',
+                context: 'Desenvolvimento de sistemas internos para gerenciar processos e dados da empresa.',
+                challenge: 'Estruturar dados, construir sistemas utilizáveis e garantir confiabilidade.',
+                evolution: 'Introdução ao desenvolvimento backend e lógica de banco de dados.',
+            },
+            phase_automation: {
+                title: 'Automação de processos e otimização de workflows',
+                summary: 'Google Forms, Google Sheets.',
+                context: 'Implementação de soluções automatizadas com formulários e planilhas para relatórios internos e workflows.',
+                challenge: 'Reduzir esforço manual e melhorar eficiência operacional.',
+                evolution: 'Adoção de mentalidade de automação e pensamento orientado a processos.',
+            },
+            phase_fullstack: {
+                title: 'Desenvolvimento fullstack e stack moderna',
+                summary: 'JavaScript, Node.js, Firebase, APIs.',
+                context: 'Transição para desenvolvimento web moderno usando ecossistema JavaScript e serviços de backend.',
+                challenge: 'Conectar frontend e backend com arquitetura escalável.',
+                evolution: 'De sistemas isolados para aplicações completas.',
+            },
+            phase_saas: {
+                title: 'SaaS e sistemas monetizados',
+                summary: 'Produto completo: pagamentos (Pix/Stripe), PDF, entrega por email.',
+                context: 'Criação do Nutrify, SaaS de nutrição com IA: fluxos de input, integração de pagamento (Pix/Stripe), geração automática de PDF e entrega por email.',
+                challenge: 'Construir um sistema monetizado completo de ponta a ponta.',
+                evolution: 'Desenvolvedor → Construtor de Produto → Sistemas orientados a receita.',
+            },
+            phase_webhooks: {
+                title: 'Automação backend e sistemas event-driven',
+                summary: 'Webhooks, APIs, Firebase, serverless.',
+                context: 'Implementação de automação baseada em webhooks para pagamentos, processamento e ações de sistema.',
+                challenge: 'Tratar fluxos assíncronos e garantir confiabilidade do sistema.',
+                evolution: 'Compreensão de orquestração backend e arquitetura event-driven.',
+            },
+            phase_ai: {
+                title: 'Integração de IA e recursos inteligentes',
+                summary: 'OpenAI API, prompt engineering.',
+                context: 'Integração de IA em aplicações para geração de conteúdo, automação de decisões e melhoria da experiência do usuário.',
+                challenge: 'Alinhar outputs de IA com workflows reais de produto.',
+                evolution: 'De construtor de sistemas para designer de sistemas inteligentes.',
+            },
+            phase_junior_dev: {
+                year: '2026 até o momento',
+                title: 'Experiência profissional como desenvolvedor júnior',
+                summary: 'Web, mobile, backend. Ambiente de produção.',
+                context: 'Atuação atual como desenvolvedor júnior, desenvolvendo sistemas web e aplicações mobile em ambientes de produção reais. Responsabilidades: desenvolvimento de sistemas web, integração backend, implementação de UI, desenvolvimento mobile com Flutter, manutenção e evolução de sistemas existentes.',
+                challenge: 'Entregar features prontas para produção e manter qualidade dos sistemas.',
+                evolution: 'De construtor independente para desenvolvedor profissional em ambientes de equipe.',
+            },
+            phase_complex: {
+                title: 'Desenvolvimento multi-sistema e ecossistema SaaS',
+                summary: 'Playlix, MyAnna, dashboards e painéis admin.',
+                context: 'Desenvolvimento de múltiplos sistemas e produtos: Playlix (SaaS com roles), MyAnna (assistente e automação WhatsApp), dashboards e painéis de administração.',
+                challenge: 'Gerenciar múltiplos sistemas, usuários e fluxos complexos.',
+                evolution: 'Pensamento em plataformas escaláveis e sistemas interconectados.',
+            },
+            phase_product: {
+                title: 'Engenharia de produto e desenvolvimento orientado a negócio',
+                summary: 'Fullstack, pagamentos, analytics, automação.',
+                context: 'Foco em construir sistemas que geram receita, melhoram conversões e otimizam a experiência do usuário.',
+                challenge: 'Alinhar execução técnica com impacto de negócio.',
+                evolution: 'Desenvolvedor → Engenheiro de Produto → Construtor de SaaS.',
+            },
+        },
+        story: {
+            eyebrow: 'Trajetória profissional',
+            title: 'Da primeira linha ao produto em escala.',
+            description: 'Uma narrativa de evolução técnica e profissional — da curiosidade inicial à execução em ambientes de produção.',
+            placeholder: 'Selecione um capítulo para explorar.',
+            placeholder_hint: 'Use a barra lateral ou role para navegar.',
+            label_context: 'Contexto',
+            label_challenge: 'Desafio',
+            label_evolution: 'Evolução',
+            label_insight: 'Por que importou',
+            ask_assistant: 'Perguntar ao assistente sobre esta fase',
+            view_projects: 'Ver projetos desta fase',
+            of: 'de',
+            chapters_explored: 'capítulos explorados',
+            journey_complete: 'Trajetória completa explorada.',
+            phase_type: {
+                exposure: 'Exposição',
+                operations: 'Operações',
+                systems: 'Sistemas',
+                automation: 'Automação',
+                fullstack: 'Fullstack',
+                saas: 'SaaS',
+                backend: 'Backend',
+                ai: 'IA',
+                ecosystem: 'Ecossistema',
+                product: 'Produto',
+                professional: 'Profissional',
+            },
+            phase_origins: {
+                title: 'Exposição precoce ao desenvolvimento web',
+                summary: 'Primeiro contato com desenvolvimento web na infância, por volta dos 11 anos. Exploração de como sites são construídos e estruturados.',
+                context: 'Ambiente de curiosidade e aprendizado autodirigido. Sem orientação formal, mas com forte interesse em entender a lógica da web.',
+                challenge: 'Aprender conceitos centrais sem guia estruturado e desenvolver familiaridade com HTML e CSS.',
+                evolution: 'Base técnica de longo prazo e curiosidade que sustentaria a trajetória posterior.',
+                insight: 'A exposição precoce criou familiaridade natural com a lógica da web.',
+            },
+            phase_admin: {
+                title: 'Operações administrativas com foco em suporte T.I.',
+                summary: 'Primeira experiência profissional aos 18 anos, em ambiente de escritório, como assistente administrativo com forte componente de suporte técnico.',
+                context: 'Ambiente de negócio real. Contato com workflows operacionais, sistemas internos e rotinas técnicas.',
+                challenge: 'Lidar com demandas reais de negócio e apoiar operações técnicas no dia a dia.',
+                evolution: 'Transição de curiosidade para responsabilidade prática e resolução de problemas em ambientes reais.',
+                insight: 'O contato com operações reais moldou o entendimento de como sistemas servem ao negócio.',
+            },
+            phase_internal_systems: {
+                title: 'Primeiros sistemas internos e gestão de dados',
+                summary: 'Desenvolvimento de sistemas internos para organizar processos e dados, marcando a transição de suporte para criação de software.',
+                context: 'Necessidade de estruturar dados e processos da empresa em ferramentas utilizáveis.',
+                challenge: 'Estruturar dados, construir sistemas utilizáveis e garantir confiabilidade operacional.',
+                evolution: 'Introdução ao desenvolvimento backend e lógica de banco de dados com PHP e MySQL.',
+                insight: 'O primeiro sistema real ensinou que software deve resolver problemas concretos.',
+            },
+            phase_automation: {
+                title: 'Automação de processos e otimização de workflows',
+                summary: 'Criação de melhorias de fluxo usando formulários, planilhas e lógica de automação para reduzir esforço manual e melhorar visibilidade interna.',
+                context: 'Processos manuais repetitivos que consumiam tempo e geravam inconsistências.',
+                challenge: 'Reduzir esforço manual e melhorar eficiência operacional com ferramentas acessíveis.',
+                evolution: 'Adoção de mentalidade de automação e pensamento orientado a processos.',
+                insight: 'Automação bem feita libera tempo para trabalho de maior valor.',
+            },
+            phase_fullstack: {
+                title: 'Desenvolvimento fullstack e transição para stack moderna',
+                summary: 'Transição para desenvolvimento web moderno com ecossistema JavaScript, serviços de backend, APIs e pensamento de aplicação completa.',
+                context: 'Evolução de ferramentas isoladas para aplicações integradas com frontend e backend.',
+                challenge: 'Conectar frontend e backend com arquitetura escalável e dados em tempo real.',
+                evolution: 'De sistemas isolados para aplicações completas com Node.js, Firebase e APIs.',
+                insight: 'A stack moderna permitiu construir produtos, não apenas scripts.',
+            },
+            phase_saas: {
+                title: 'SaaS e sistemas monetizados',
+                summary: 'Criação de fluxos de produto reais como o Nutrify: processamento de pagamentos, geração de outputs, lógica de entrega e design de sistemas monetizados.',
+                context: 'Produto completo com usuários reais: input, pagamento (Stripe/Mercado Pago), geração de PDF e entrega por email.',
+                challenge: 'Construir um sistema monetizado completo de ponta a ponta, com confiabilidade.',
+                evolution: 'Desenvolvedor → Construtor de Produto → Sistemas orientados a receita.',
+                insight: 'Monetizar exige pensar em fluxo completo, não apenas em features.',
+            },
+            phase_webhooks: {
+                title: 'Automação backend e sistemas event-driven',
+                summary: 'Implementação de fluxos backend baseados em webhooks para processar eventos assíncronos: pagamentos, mudanças de estado, geração de arquivos e triggers automáticos.',
+                context: 'Necessidade de orquestrar processos assíncronos com confiabilidade.',
+                challenge: 'Tratar fluxos assíncronos e garantir confiabilidade do sistema.',
+                evolution: 'Compreensão de orquestração backend e arquitetura event-driven.',
+                insight: 'Webhooks são a espinha dorsal de sistemas SaaS em operação.',
+            },
+            phase_ai: {
+                title: 'Integração de IA e recursos inteligentes',
+                summary: 'Uso de IA em produtos e camadas de automação para gerar conteúdo, apoiar decisões e melhorar a experiência do usuário.',
+                context: 'Integração de IA em aplicações para geração de conteúdo, automação e UX aprimorada.',
+                challenge: 'Alinhar outputs de IA com workflows reais de produto.',
+                evolution: 'De construtor de sistemas para designer de sistemas inteligentes.',
+                insight: 'IA amplifica o valor do produto quando integrada com propósito.',
+            },
+            phase_complex: {
+                title: 'Desenvolvimento multi-sistema e ecossistema SaaS',
+                summary: 'Expansão para sistemas mais complexos: dashboards, múltiplos papéis, fluxos admin, lógica de automação e ecossistemas como Playlix, MyAnna e plataformas relacionadas.',
+                context: 'Desenvolvimento de múltiplos sistemas e produtos com dashboards, roles e fluxos de administração.',
+                challenge: 'Gerenciar complexidade, usuários e fluxos de múltiplos produtos.',
+                evolution: 'Pensamento em plataformas escaláveis e sistemas interconectados.',
+                insight: 'Ecossistemas exigem arquitetura que suporte múltiplos produtos.',
+            },
+            phase_product: {
+                title: 'Engenharia de produto e desenvolvimento orientado a negócio',
+                summary: 'Foco em sistemas que não apenas funcionam tecnicamente, mas melhoram conversões, apoiam monetização e criam valor de negócio mensurável.',
+                context: 'Foco em construir sistemas que geram receita, melhoram conversões e otimizam a experiência do usuário.',
+                challenge: 'Alinhar execução técnica com impacto de negócio.',
+                evolution: 'Desenvolvedor → Engenheiro de Produto → Construtor de SaaS.',
+                insight: 'Técnica sem impacto de negócio é apenas código.',
+            },
+            phase_junior_dev: {
+                period: '2026 — Presente',
+                title: 'Experiência profissional como desenvolvedor júnior',
+                summary: 'Atuação atual como desenvolvedor júnior, desenvolvendo sistemas web e aplicações mobile em ambientes de produção reais.',
+                context: 'Responsabilidades: desenvolvimento de sistemas web, integração backend, implementação de UI, desenvolvimento mobile com Flutter, manutenção e evolução de sistemas existentes.',
+                challenge: 'Entregar features prontas para produção e manter qualidade dos sistemas.',
+                evolution: 'De construtor independente para desenvolvedor profissional em ambientes de equipe.',
+                insight: 'O ambiente profissional acelera a curva de maturidade técnica e de produto.',
+            },
+        },
+        guide: {
+            label: 'Inteligência do portfólio',
+            title: 'Guia do Portfólio',
+            subtitle: 'Pergunte sobre projetos, stack, experiência e resultados.',
+            description: 'Uma camada de inteligência conversacional para explorar o portfólio. Respostas curadas localmente ou via IA quando o backend está disponível.',
+            signal_1: 'Respostas sobre projetos, stack e experiência',
+            signal_2: 'Transparência operacional em tempo real',
+            signal_3: 'Fallback elegante quando o backend está indisponível',
+            launch: 'Abrir guia',
+            launch_label: 'Abrir guia do portfólio',
+            empty_state: 'Selecione um prompt ou digite sua pergunta.',
+            loading: 'Processando...',
+            insight_title: 'Fluxo do sistema',
+            mode_live: 'Modo ao vivo',
+            mode_curated: 'Modo curado',
+            security_signal: 'Chaves de API permanecem no servidor. Nenhuma credencial exposta no cliente.',
+            resilience_signal: 'Se o backend estiver indisponível, o conhecimento curado assume. Sem estado quebrado.',
+            cluster: {
+                explore_work: 'Explorar trabalho',
+                technical_depth: 'Profundidade técnica',
+                product_thinking: 'Pensamento de produto',
+                current_role: 'Cargo atual',
+            },
+            prompt: {
+                projects_main: 'Mostrar principais projetos',
+                nutrify: 'Explicar o Nutrify',
+                saas_systems: 'Mostrar sistemas SaaS',
+                stack: 'Explicar meu stack',
+                backend: 'Experiência em backend',
+                dashboard: 'Como funciona o dashboard ao vivo?',
+                portfolio_different: 'O que torna este portfólio diferente?',
+                business_projects: 'Projetos orientados a negócio',
+                product_engineering: 'Como conecto produto e engenharia?',
+                current_role: 'Sobre meu cargo atual',
+                mobile: 'Experiência com mobile',
+                building_now: 'O que estou construindo agora?',
+            },
+            runtime: {
+                init: 'Inicialização',
+                init_desc: 'useEffect dispara o fluxo de conexão quando o painel abre.',
+                backend: 'Health check',
+                backend_desc: 'Fetch para /api/health. Em dev, proxy Vite encaminha para :3001.',
+                validation: 'Validação server-side',
+                validation_desc: 'Backend verifica OPENAI_API_KEY no .env. Chave nunca exposta ao cliente.',
+                ready: 'Conectado',
+                ready_desc: 'Backend e OpenAI OK. Mensagens via POST /api/chat.',
+                curated: 'Modo curado',
+                curated_desc: 'Backend indisponível. Usa matchUserMessage() e respostas curadas.',
+                sending: 'Enviando',
+                sending_desc: 'POST /api/chat com message e history.',
+                processing: 'Processando',
+                processing_desc: 'Backend chama OpenAI API com histórico e mensagem.',
+                completed: 'Resposta',
+                completed_desc: 'Content retornado. markdownToHtml() para renderização.',
+                fallback: 'Fallback',
+                fallback_desc: 'Erro na API. Resposta local curada é usada.',
+            },
+            response_current_role_title: 'Cargo atual',
+            response_current_role_body: 'Atuo como desenvolvedor júnior, desenvolvendo sistemas web e aplicações mobile em ambientes de produção. Responsabilidades incluem desenvolvimento de sistemas web, integração backend, implementação de UI, desenvolvimento mobile com Flutter, manutenção e evolução de sistemas existentes. Stack: React, Node.js, Firebase, Flutter, APIs.',
+            response_mobile_title: 'Experiência mobile',
+            response_mobile_body: 'Desenvolvimento mobile com Flutter: Nutrify Mobile (app com Visão Computacional para escaneamento de refeições), integração com APIs, e experiência em apps nativos multiplataforma. Foco em UX e performance.',
+        },
+        assistant: {
+            title: 'Guia do Portfólio',
+            subtitle: 'Pergunte sobre projetos, stack, experiência e resultados.',
+            placeholder: 'Digite sua pergunta...',
+            send: 'Enviar',
+            suggested_1: 'Mostrar principais projetos',
+            suggested_2: 'Explicar meu stack',
+            suggested_3: 'Conte sobre o Nutrify',
+            suggested_4: 'Experiência em backend',
+            suggested_5: 'O que torna este portfólio diferente?',
+            topic_projects_main: 'projects_main',
+            topic_stack: 'stack',
+            topic_nutrify: 'nutrify',
+            topic_backend_experience: 'backend_experience',
+            topic_business_results: 'business_results',
+            topic_strongest_area: 'strongest_area',
+            topic_portfolio_different: 'portfolio_different',
+            topic_dashboard_explain: 'dashboard_explain',
+            topic_fallback: 'fallback',
+            response_projects_main_title: 'Principais Projetos',
+            response_projects_main_body: 'Os projetos em destaque são: Nutrify Web (sistema de planos nutricionais com IA e checkout Mercado Pago), Nutrify Mobile (app Flutter com Visão Computacional para escaneamento de refeições) e Dashboard Avançado (painel com métricas de anúncios em tempo real via WebSockets). Cada um resolve um problema de negócio concreto com stack adequado.',
+            response_stack_title: 'Stack Técnico',
+            response_stack_body: 'Frontend: React, TypeScript, Framer Motion. Backend: Node.js, REST APIs, Webhooks. Mobile: Flutter, Dart. IA: OpenAI API, integrações. Infra: automação, workflows. Pagamentos: Mercado Pago. Foco em ecossistemas de alto desempenho e sistemas escaláveis.',
+            response_nutrify_title: 'Nutrify',
+            response_nutrify_body: 'SaaS de planos nutricionais com IA. O web usa OpenAI para gerar dietas personalizadas e Mercado Pago para checkout. O mobile usa Visão Computacional (TensorFlow/MLKit) para identificar alimentos pela câmera. Faturamento acima de R$ 150k, liderança de 6 pessoas. Arquitetura Node.js, webhooks para conciliação em tempo real.',
+            response_backend_experience_title: 'Experiência em Backend',
+            response_backend_experience_body: 'APIs REST em Node.js, webhooks (Mercado Pago), conciliação bancária, filas de processamento, integração com OpenAI. Automação de workflows e gestão de infraestrutura. Sistemas que processam pagamentos e geram relatórios em tempo real.',
+            response_business_results_title: 'Resultados de Negócio',
+            response_business_results_body: 'Faturamento acima de R$ 150k no Nutrify. Liderança de equipe de 6 pessoas. Zero falhas de integração em processamento de pagamentos. Centralização de dados de marketing para decisões baseadas em ROI. Produtos que escalam e geram valor recorrente.',
+            response_strongest_area_title: 'Área de Destaque',
+            response_strongest_area_body: 'Arquitetura de sistemas que combinam frontend performático, backend robusto, integrações críticas (pagamentos, IA) e dados em tempo real. Visão de produto: entender o problema, escolher a stack e entregar impacto mensurável.',
+            response_portfolio_different_title: 'O que torna este portfólio diferente',
+            response_portfolio_different_body: 'Comporta-se como um produto: assistente integrado, timeline narrativa interativa, dashboard simulado e gamificação sutil. Demonstra pensamento de produto, não apenas listagem de projetos. Cada seção comunica decisões técnicas e resultados de negócio.',
+            response_dashboard_explain_title: 'Sobre o painel',
+            response_dashboard_explain_body: 'É uma simulação didática que demonstra arquitetura de sistemas reais: eventos, webhooks, logs e atualização de métricas. Mostra como um fluxo de compra dispara processamento, atualiza filas e reflete em KPIs. O código é 100% client-side, mas o fluxo espelha sistemas SaaS reais.',
+            response_fallback_title: 'Não encontrei uma resposta exata',
+            response_fallback_body: 'Tente perguntar sobre: principais projetos, stack técnico, Nutrify, experiência em backend, resultados de negócio ou o que torna este portfólio diferente. Ou explore as seções diretamente.',
+            under_hood_title: 'O que está acontecendo por debaixo dos panos',
+            under_hood_init: 'Inicializando conexão...',
+            under_hood_backend: 'Conectando ao backend...',
+            under_hood_openai: 'Verificando integração OpenAI...',
+            under_hood_ready: 'Pronto. Conectado ao GPT.',
+            under_hood_fallback: 'Modo local. Backend indisponível.',
+            under_hood_sending: 'Enviando mensagem ao backend...',
+            under_hood_processing: 'Processando com GPT...',
+            under_hood_received: 'Resposta recebida.',
+            under_hood_error: 'Erro. Usando respostas locais.',
+        },
+        hood: {
+            step_init_title: '1. Inicialização',
+            step_init_desc: 'useEffect dispara o fluxo de conexão quando o drawer abre. Evita chamadas desnecessárias quando fechado.',
+            step_backend_title: '2. Health check',
+            step_backend_desc: 'Fetch para /api/health. Em dev, o proxy do Vite encaminha para localhost:3001. Retorna { ok, openai }.',
+            step_openai_title: '3. Verificação OpenAI',
+            step_openai_desc: 'Backend checa se OPENAI_API_KEY está no .env. A chave nunca é exposta ao cliente.',
+            step_ready_title: '4. Conectado',
+            step_ready_desc: 'Backend e OpenAI OK. Mensagens serão enviadas via POST /api/chat.',
+            step_fallback_title: '4. Modo local',
+            step_fallback_desc: 'Backend indisponível. Usa matchUserMessage() e respostas curadas em assistantMatch.ts.',
+            step_sending_title: '5. Enviando',
+            step_sending_desc: 'POST /api/chat com message e history (últimas 10). JSON no body.',
+            step_processing_title: '6. GPT processando',
+            step_processing_desc: 'Backend chama openai.chat.completions.create() com system prompt, histórico e mensagem.',
+            step_received_title: '7. Resposta',
+            step_received_desc: 'Content retornado. Frontend aplica markdownToHtml() para **negrito** e quebras de linha.',
+            step_error_title: '7. Fallback',
+            step_error_desc: 'Erro na API. Resposta local curada é usada automaticamente.',
+        },
+        console: {
+            title: 'Console de Operações',
+            subtitle: 'Simulação de um produto em operação.',
+            display_title: 'Sistema em operação.',
+            description: 'Fluxo event-driven simulado: ação do usuário → pagamento → webhook → processamento → entrega. Este fluxo representa como o Nutrify processa compras em produção.',
+            mrr: 'MRR',
+            active_users: 'Usuários ativos',
+            conversions_today: 'Conversões hoje',
+            reports_generated: 'Relatórios gerados',
+            queue_processed: 'Fila processada',
+            simulate_flow: 'Executar fluxo de compra',
+            simulating: 'Processando...',
+            activity_log: 'Log de atividade',
+            empty_log: 'Nenhum evento ainda. Clique em "Executar fluxo" para ver a simulação.',
+            flow_label: 'Pipeline do sistema',
+            flow_complete: 'Fluxo concluído. Estado atualizado.',
+            insight: 'Este fluxo simula a arquitetura event-driven usada no Nutrify: webhooks recebem eventos de pagamento, o backend processa e enfileira jobs, e a entrega é automatizada.',
+            link_nutrify: 'Ver case do Nutrify →',
         }
     },
     en: {
         nav: {
             about: 'About',
-            experience: 'Experience',
+            guide: 'Guide',
+            trajectory: 'Trajectory',
             projects: 'Projects',
+            console: 'Console',
             contact: 'Contact',
         },
         hero: {
@@ -132,6 +580,7 @@ export const translations = {
             subheadline: 'Fullstack Developer focused on high-performance ecosystems (React, Node, Flutter) and AI.',
             cta_projects: 'View Projects',
             cta_contact: 'Get in touch',
+            cta_explore: 'Explore product',
             proof: {
                 faturamento: '+$30k+ revenue',
                 disponibilidade: 'Consultant & Builder',
@@ -220,6 +669,13 @@ export const translations = {
                 case_solution: 'Development of a Flutter app with a Computer Vision layer (TensorFlow/MLKit) for automatic food identification via camera.',
                 case_results: 'Significant improvement in user experience and high accuracy in automatic food identification.',
             },
+            secret: {
+                title: 'Architecture Vision',
+                description: 'Unlocked content: vision of how real SaaS systems are structured.',
+                case_problem: 'This block is shown when you unlock the SaaS Operator badge — by exploring the assistant, opening case studies, and simulating the dashboard.',
+                case_solution: 'Event-driven architecture: webhooks receive events, queues process jobs, metrics update. The simulated console demonstrates this flow in an educational way.',
+                case_results: 'Technical maturity communication: the recruiter sees you understand systems in operation, not just interfaces.',
+            },
             dashboard: {
                 title: 'Advanced Dashboard',
                 description: 'Admin panel with real-time ad metrics.',
@@ -230,20 +686,456 @@ export const translations = {
         },
         contact: {
             title: "Let's Talk",
-            headline: 'Ready to build something exceptional?',
-            subtitle: 'Available for new projects and consulting.',
-            email_copy: 'Copy Email',
-            whatsapp: 'WhatsApp Me',
+            eyebrow: 'Contact',
+            headline: 'Ready to turn ideas into real, scalable products?',
+            lead: 'Product-oriented development: production-grade systems, automation that cuts operational drag, and interfaces that support the business. Open to freelance work, product builds, and technical collaboration.',
+            value_title: 'What I build',
+            value_body: 'SaaS with payments and webhooks, operational dashboards, AI integrations, mobile apps (Flutter), and end-to-end automated flows.',
+            work_title: 'How I work',
+            work_body: 'Architecture built for scale, maintainable code, and steady alignment—from scope to shipping in real environments.',
+            projects_line: 'Experience with monetized products, dashboards, live data, and systems serving real users.',
+            availability: 'Working as a developer in a professional setting while operating my own systems in production.',
+            trust_1: 'Production systems with payments, automation & AI',
+            trust_2: 'Stack: React, Node.js, Firebase, Flutter',
+            trust_3: 'Product thinking—not just UI',
+            email_label: 'Email',
+            email_copy: 'Copy',
+            email_send: 'Send email',
+            whatsapp_label: 'WhatsApp',
+            whatsapp_desc: 'Direct line to align scope, timeline, and next steps.',
+            whatsapp_cta: 'Start conversation',
+            project_card_title: 'Discuss your project',
+            project_card_desc: 'Best for an initial brief: goals, stack, and delivery expectations.',
+            project_card_cta: 'Message now',
+            copied: 'Copied.',
+            bridge: 'Want to build something at the level of what you saw in this portfolio?',
+            whatsapp_prefill: 'Hi Pablo, I saw your portfolio and would like to discuss a project.',
         },
         footer: {
             rights: '© 2024 Pablo Toledo. All rights reserved.',
+        },
+        gamification: {
+            open_badges: 'Open achievements',
+            achievements: 'Achievements',
+            badge_explorer: 'Explorer',
+            badge_system_analyst: 'System Analyst',
+            badge_backend_detective: 'Backend Detective',
+            badge_product_mindset: 'Product Mindset',
+            badge_saas_operator: 'SaaS Operator',
+        },
+        exploration: {
+            open_panel: 'View exploration progress',
+            panel_title: 'Exploration progress',
+            exploration_progress: 'Sections explored',
+            insights_title: 'Unlocked insights',
+            insight_placeholder: 'Explore the portfolio to unlock.',
+            dismiss_toast: 'Dismiss',
+            stage: {
+                initial: 'Initial exploration',
+                awareness: 'System awareness',
+                understanding: 'Product understanding',
+                full_context: 'Full context',
+            },
+            section: {
+                trajectory: 'Trajectory',
+                projects: 'Projects',
+                console: 'Console',
+                guide: 'Guide',
+            },
+            toast: {
+                trajectory_complete: 'Trajectory fully explored.',
+                system_flow_understood: 'System flow understood.',
+                event_pipeline_observed: 'Event pipeline observed.',
+                product_logic_recognized: 'Product logic recognized.',
+                full_system_interaction: 'Full system interaction completed.',
+            },
+            insight: {
+                explorer: {
+                    title: 'Full trajectory explored',
+                    description: 'You explored all phases of the professional trajectory.',
+                    why: 'Reflects understanding of technical evolution and profile.',
+                },
+                system_analyst: {
+                    title: 'System flow understood',
+                    description: 'You analyzed a case study and observed how the system flow is structured.',
+                    why: 'Demonstrates ability to analyze architecture and technical decisions.',
+                },
+                backend_detective: {
+                    title: 'Event pipeline observed',
+                    description: 'You explored the operations console and observed how events flow through the system.',
+                    why: 'Reflects understanding of backend orchestration and event-driven architecture.',
+                },
+                product_mindset: {
+                    title: 'Product logic recognized',
+                    description: 'You interacted with the guide and explored the product logic behind the portfolio.',
+                    why: 'Indicates product-oriented thinking and user experience awareness.',
+                },
+                saas_operator: {
+                    title: 'Full system interaction completed',
+                    description: 'You simulated the purchase flow and analyzed multiple cases, understanding the system as a whole.',
+                    why: 'Communicates maturity in SaaS systems and product vision.',
+                },
+            },
+        },
+        timeline: {
+            title: 'Evolution',
+            subtitle: 'From first line to product at scale.',
+            placeholder_hint: 'Click on a phase to see details',
+            label_context: 'Context',
+            label_challenge: 'Challenge',
+            label_evolution: 'Evolution',
+            phase_origins: {
+                title: 'Early exposure to web development',
+                summary: 'HTML, CSS. First exploration of how websites are built and structured.',
+                context: 'First contact with web development at around 11 years old, exploring how websites are built and structured.',
+                challenge: 'Learning without formal guidance and understanding core web concepts.',
+                evolution: 'Development of long-term familiarity with web technologies and strong technical curiosity.',
+            },
+            phase_admin: {
+                title: 'Administrative role with IT support focus',
+                summary: 'Office Suite, Excel, system support.',
+                context: 'At 18 years old (2023), started working as an administrative assistant with responsibilities involving IT support, system usage, and internal operations.',
+                challenge: 'Handling real business workflows and supporting technical operations.',
+                evolution: 'Transition from curiosity to practical problem-solving in real environments.',
+            },
+            phase_internal_systems: {
+                title: 'First internal systems and data management',
+                summary: 'PHP, MySQL. Systems for company processes and data.',
+                context: 'Development of internal systems to manage company processes and data.',
+                challenge: 'Structuring data, building usable systems, and ensuring reliability.',
+                evolution: 'Introduction to backend development and database logic.',
+            },
+            phase_automation: {
+                title: 'Process automation and workflow optimization',
+                summary: 'Google Forms, Google Sheets.',
+                context: 'Implementation of automated solutions using forms and spreadsheets for internal reporting and workflows.',
+                challenge: 'Reducing manual effort and improving operational efficiency.',
+                evolution: 'Adoption of automation mindset and process-driven thinking.',
+            },
+            phase_fullstack: {
+                title: 'Fullstack development and modern stack',
+                summary: 'JavaScript, Node.js, Firebase, APIs.',
+                context: 'Transition to modern web development using JavaScript ecosystems and backend services.',
+                challenge: 'Connecting frontend and backend with scalable architecture.',
+                evolution: 'From isolated systems to complete applications.',
+            },
+            phase_saas: {
+                title: 'SaaS development and monetized systems',
+                summary: 'Complete product: payments (Pix/Stripe), PDF, email delivery.',
+                context: 'Creation of Nutrify, an AI-powered SaaS platform with user input flows, payment integration (Pix/Stripe), automated PDF generation, and email delivery.',
+                challenge: 'Building a complete monetized system end-to-end.',
+                evolution: 'Developer to Product Builder to Revenue-focused systems.',
+            },
+            phase_webhooks: {
+                title: 'Backend automation and event-driven systems',
+                summary: 'Webhooks, APIs, Firebase, serverless.',
+                context: 'Implementation of webhook-based automation for payments, processing, and system actions.',
+                challenge: 'Handling asynchronous flows and system reliability.',
+                evolution: 'Understanding backend orchestration and event-driven architecture.',
+            },
+            phase_ai: {
+                title: 'AI integration and intelligent features',
+                summary: 'OpenAI API, prompt engineering.',
+                context: 'Integration of AI into applications for content generation, automation, and enhanced user experience.',
+                challenge: 'Aligning AI outputs with real product workflows.',
+                evolution: 'From system builder to intelligent system designer.',
+            },
+            phase_junior_dev: {
+                year: '2026 to present',
+                title: 'Professional experience as junior developer',
+                summary: 'Web, mobile, backend. Production environments.',
+                context: 'Currently working as a Junior Developer, actively developing web systems and mobile applications in real production environments. Responsibilities include web system development, backend integration, UI implementation, mobile development using Flutter, and maintenance and evolution of existing systems.',
+                challenge: 'Delivering production-ready features and maintaining system quality.',
+                evolution: 'From independent builder to professional developer operating in team environments.',
+            },
+            phase_complex: {
+                title: 'Multi-system development and SaaS ecosystem',
+                summary: 'Playlix, MyAnna, dashboards and admin panels.',
+                context: 'Development of multiple systems and products such as Playlix (role-based SaaS platform), MyAnna (WhatsApp automation assistant), dashboards and admin panels.',
+                challenge: 'Managing multiple systems, users, and complex flows.',
+                evolution: 'Thinking in scalable platforms and interconnected systems.',
+            },
+            phase_product: {
+                title: 'Product engineering and business-oriented development',
+                summary: 'Fullstack, payments, analytics, automation.',
+                context: 'Focus on building systems that generate revenue, improve conversions, and optimize user experience.',
+                challenge: 'Aligning technical execution with business impact.',
+                evolution: 'Developer to Product Engineer to SaaS Builder.',
+            },
+        },
+        story: {
+            eyebrow: 'Professional trajectory',
+            title: 'From first line to product at scale.',
+            description: 'A narrative of technical and professional evolution — from early curiosity to execution in production environments.',
+            placeholder: 'Select a chapter to explore.',
+            placeholder_hint: 'Use the sidebar or scroll to navigate.',
+            label_context: 'Context',
+            label_challenge: 'Challenge',
+            label_evolution: 'Evolution',
+            label_insight: 'Why it mattered',
+            ask_assistant: 'Ask assistant about this phase',
+            view_projects: 'View projects from this phase',
+            of: 'of',
+            chapters_explored: 'chapters explored',
+            journey_complete: 'Full trajectory explored.',
+            phase_type: {
+                exposure: 'Exposure',
+                operations: 'Operations',
+                systems: 'Systems',
+                automation: 'Automation',
+                fullstack: 'Fullstack',
+                saas: 'SaaS',
+                backend: 'Backend',
+                ai: 'AI',
+                ecosystem: 'Ecosystem',
+                product: 'Product',
+                professional: 'Professional',
+            },
+            phase_origins: {
+                title: 'Early exposure to web development',
+                summary: 'First contact with web development in childhood, around age 11. Exploration of how websites are built and structured.',
+                context: 'Environment of curiosity and self-directed learning. No formal guidance, but strong interest in understanding web logic.',
+                challenge: 'Learning core concepts without structured guidance and developing familiarity with HTML and CSS.',
+                evolution: 'Long-term technical foundation and curiosity that would sustain the trajectory ahead.',
+                insight: 'Early exposure created natural familiarity with web logic.',
+            },
+            phase_admin: {
+                title: 'Administrative operations with IT support focus',
+                summary: 'First professional experience at 18, in an office environment, as an administrative assistant with a strong technical support component.',
+                context: 'Real business environment. Contact with operational workflows, internal systems, and technical routines.',
+                challenge: 'Handling real business demands and supporting technical operations on a daily basis.',
+                evolution: 'Transition from curiosity to practical responsibility and problem-solving in real environments.',
+                insight: 'Contact with real operations shaped the understanding of how systems serve the business.',
+            },
+            phase_internal_systems: {
+                title: 'First internal systems and data management',
+                summary: 'Development of internal systems to organize processes and data, marking the transition from support to software creation.',
+                context: 'Need to structure company data and processes into usable tools.',
+                challenge: 'Structuring data, building usable systems, and ensuring operational reliability.',
+                evolution: 'Introduction to backend development and database logic with PHP and MySQL.',
+                insight: 'The first real system taught that software must solve concrete problems.',
+            },
+            phase_automation: {
+                title: 'Process automation and workflow optimization',
+                summary: 'Creation of workflow improvements using forms, spreadsheets, and automation logic to reduce manual effort and improve internal visibility.',
+                context: 'Repetitive manual processes that consumed time and generated inconsistencies.',
+                challenge: 'Reducing manual effort and improving operational efficiency with accessible tools.',
+                evolution: 'Adoption of automation mindset and process-oriented thinking.',
+                insight: 'Well-executed automation frees time for higher-value work.',
+            },
+            phase_fullstack: {
+                title: 'Fullstack development and modern stack transition',
+                summary: 'Transition to modern web development with JavaScript ecosystem, backend services, APIs, and full application flow thinking.',
+                context: 'Evolution from isolated tools to integrated applications with frontend and backend.',
+                challenge: 'Connecting frontend and backend with scalable architecture and real-time data.',
+                evolution: 'From isolated systems to complete applications with Node.js, Firebase, and APIs.',
+                insight: 'The modern stack enabled building products, not just scripts.',
+            },
+            phase_saas: {
+                title: 'SaaS development and monetized systems',
+                summary: 'Creation of real product flows such as Nutrify: payment processing, generated outputs, delivery logic, and monetized system design.',
+                context: 'Complete product with real users: input, payment (Stripe/Mercado Pago), PDF generation, and email delivery.',
+                challenge: 'Building a complete monetized system end-to-end, with reliability.',
+                evolution: 'Developer to Product Builder to Revenue-oriented systems.',
+                insight: 'Monetizing requires thinking about the full flow, not just features.',
+            },
+            phase_webhooks: {
+                title: 'Backend automation and event-driven systems',
+                summary: 'Implementation of webhook-based backend flows to process asynchronous events: payments, state changes, file generation, and automated triggers.',
+                context: 'Need to orchestrate asynchronous processes with reliability.',
+                challenge: 'Handling asynchronous flows and ensuring system reliability.',
+                evolution: 'Understanding of backend orchestration and event-driven architecture.',
+                insight: 'Webhooks are the backbone of SaaS systems in operation.',
+            },
+            phase_ai: {
+                title: 'AI integration and intelligent features',
+                summary: 'Use of AI in products and automation layers to generate content, support decisions, and enhance user experience.',
+                context: 'Integration of AI into applications for content generation, automation, and enhanced UX.',
+                challenge: 'Aligning AI outputs with real product workflows.',
+                evolution: 'From system builder to intelligent system designer.',
+                insight: 'AI amplifies product value when integrated with purpose.',
+            },
+            phase_complex: {
+                title: 'Multi-system development and SaaS ecosystem',
+                summary: 'Expansion into more complex systems: dashboards, multiple roles, admin flows, automation logic, and ecosystems such as Playlix, MyAnna, and related platforms.',
+                context: 'Development of multiple systems and products with dashboards, roles, and administration flows.',
+                challenge: 'Managing complexity, users, and flows across multiple products.',
+                evolution: 'Thinking in scalable platforms and interconnected systems.',
+                insight: 'Ecosystems require architecture that supports multiple products.',
+            },
+            phase_product: {
+                title: 'Product engineering and business-oriented development',
+                summary: 'Focus on systems that do not just function technically, but improve conversions, support monetization, and create measurable business value.',
+                context: 'Focus on building systems that generate revenue, improve conversions, and optimize user experience.',
+                challenge: 'Aligning technical execution with business impact.',
+                evolution: 'Developer to Product Engineer to SaaS Builder.',
+                insight: 'Technical skill without business impact is just code.',
+            },
+            phase_junior_dev: {
+                period: '2026 — Present',
+                title: 'Professional experience as junior developer',
+                summary: 'Current role as Junior Developer, developing web systems and mobile applications in real production environments.',
+                context: 'Responsibilities: web system development, backend integration, UI implementation, mobile development with Flutter, maintenance and evolution of existing systems.',
+                challenge: 'Delivering production-ready features and maintaining system quality.',
+                evolution: 'From independent builder to professional developer operating in team environments.',
+                insight: 'The professional environment accelerates the curve of technical and product maturity.',
+            },
+        },
+        guide: {
+            label: 'Portfolio intelligence',
+            title: 'Portfolio Guide',
+            subtitle: 'Ask about projects, stack, experience, and results.',
+            description: 'A conversational intelligence layer to explore the portfolio. Curated responses locally or via AI when the backend is available.',
+            signal_1: 'Answers about projects, stack, and experience',
+            signal_2: 'Real-time operational transparency',
+            signal_3: 'Graceful fallback when backend is unavailable',
+            launch: 'Open guide',
+            launch_label: 'Open portfolio guide',
+            empty_state: 'Select a prompt or type your question.',
+            loading: 'Processing...',
+            insight_title: 'System flow',
+            mode_live: 'Live mode',
+            mode_curated: 'Curated mode',
+            security_signal: 'API keys remain server-side. No credentials exposed to the client.',
+            resilience_signal: 'If backend is unavailable, curated knowledge takes over. No broken state.',
+            cluster: {
+                explore_work: 'Explore work',
+                technical_depth: 'Technical depth',
+                product_thinking: 'Product thinking',
+                current_role: 'Current role',
+            },
+            prompt: {
+                projects_main: 'Show main projects',
+                nutrify: 'Explain Nutrify',
+                saas_systems: 'Show SaaS systems',
+                stack: 'Explain my stack',
+                backend: 'Backend experience',
+                dashboard: 'How does the live dashboard work?',
+                portfolio_different: 'What makes this portfolio different?',
+                business_projects: 'Business-oriented projects',
+                product_engineering: 'How do I connect product and engineering?',
+                current_role: 'About my current role',
+                mobile: 'Mobile experience',
+                building_now: 'What am I building now?',
+            },
+            runtime: {
+                init: 'Initialization',
+                init_desc: 'useEffect triggers the connection flow when the panel opens.',
+                backend: 'Health check',
+                backend_desc: 'Fetch to /api/health. In dev, Vite proxy forwards to :3001.',
+                validation: 'Server-side validation',
+                validation_desc: 'Backend checks OPENAI_API_KEY in .env. Key never exposed to client.',
+                ready: 'Connected',
+                ready_desc: 'Backend and OpenAI OK. Messages via POST /api/chat.',
+                curated: 'Curated mode',
+                curated_desc: 'Backend unavailable. Uses matchUserMessage() and curated responses.',
+                sending: 'Sending',
+                sending_desc: 'POST /api/chat with message and history.',
+                processing: 'Processing',
+                processing_desc: 'Backend calls OpenAI API with history and message.',
+                completed: 'Response',
+                completed_desc: 'Content returned. markdownToHtml() for rendering.',
+                fallback: 'Fallback',
+                fallback_desc: 'API error. Curated local response is used.',
+            },
+            response_current_role_title: 'Current role',
+            response_current_role_body: 'Working as a Junior Developer, developing web systems and mobile applications in production environments. Responsibilities include web system development, backend integration, UI implementation, mobile development with Flutter, maintenance and evolution of existing systems. Stack: React, Node.js, Firebase, Flutter, APIs.',
+            response_mobile_title: 'Mobile experience',
+            response_mobile_body: 'Mobile development with Flutter: Nutrify Mobile (app with Computer Vision for meal scanning), API integration, and experience in cross-platform native apps. Focus on UX and performance.',
+        },
+        assistant: {
+            title: 'Portfolio Guide',
+            subtitle: 'Ask about projects, stack, experience, and results.',
+            placeholder: 'Type your question...',
+            send: 'Send',
+            suggested_1: 'Show main projects',
+            suggested_2: 'Explain my stack',
+            suggested_3: 'Tell me about Nutrify',
+            suggested_4: 'Backend experience',
+            suggested_5: 'What makes this portfolio different?',
+            topic_projects_main: 'projects_main',
+            topic_stack: 'stack',
+            topic_nutrify: 'nutrify',
+            topic_backend_experience: 'backend_experience',
+            topic_business_results: 'business_results',
+            topic_strongest_area: 'strongest_area',
+            topic_portfolio_different: 'portfolio_different',
+            topic_dashboard_explain: 'dashboard_explain',
+            topic_fallback: 'fallback',
+            response_projects_main_title: 'Main Projects',
+            response_projects_main_body: 'Featured projects: Nutrify Web (nutritional plans system with AI and Mercado Pago checkout), Nutrify Mobile (Flutter app with Computer Vision for meal scanning), and Advanced Dashboard (panel with real-time ad metrics via WebSockets). Each solves a concrete business problem with the right stack.',
+            response_stack_title: 'Technical Stack',
+            response_stack_body: 'Frontend: React, TypeScript, Framer Motion. Backend: Node.js, REST APIs, Webhooks. Mobile: Flutter, Dart. AI: OpenAI API, integrations. Infra: automation, workflows. Payments: Mercado Pago. Focus on high-performance ecosystems and scalable systems.',
+            response_nutrify_title: 'Nutrify',
+            response_nutrify_body: 'Nutritional plans SaaS with AI. The web app uses OpenAI for personalized diets and Mercado Pago for checkout. The mobile app uses Computer Vision (TensorFlow/MLKit) to identify food via camera. Revenue above $30k, leading 6 people. Node.js architecture, webhooks for real-time reconciliation.',
+            response_backend_experience_title: 'Backend Experience',
+            response_backend_experience_body: 'REST APIs in Node.js, webhooks (Mercado Pago), bank reconciliation, processing queues, OpenAI integration. Workflow automation and infrastructure management. Systems that process payments and generate reports in real time.',
+            response_business_results_title: 'Business Results',
+            response_business_results_body: 'Revenue above $30k at Nutrify. Leading a team of 6. Zero integration failures in payment processing. Centralization of marketing data for ROI-based decisions. Products that scale and generate recurring value.',
+            response_strongest_area_title: 'Strongest Area',
+            response_strongest_area_body: 'Architecture of systems that combine performant frontend, robust backend, critical integrations (payments, AI), and real-time data. Product vision: understand the problem, choose the stack, and deliver measurable impact.',
+            response_portfolio_different_title: 'What makes this portfolio different',
+            response_portfolio_different_body: 'Behaves like a product: integrated assistant, interactive narrative timeline, simulated dashboard, and subtle gamification. Demonstrates product thinking, not just project listing. Each section communicates technical decisions and business results.',
+            response_dashboard_explain_title: 'About the panel',
+            response_dashboard_explain_body: 'It is an educational simulation that demonstrates real system architecture: events, webhooks, logs, and metric updates. Shows how a purchase flow triggers processing, updates queues, and reflects in KPIs. The code is 100% client-side, but the flow mirrors real SaaS systems.',
+            response_fallback_title: 'I did not find an exact answer',
+            response_fallback_body: 'Try asking about: main projects, technical stack, Nutrify, backend experience, business results, or what makes this portfolio different. Or explore the sections directly.',
+            under_hood_title: 'What\'s happening under the hood',
+            under_hood_init: 'Initializing connection...',
+            under_hood_backend: 'Connecting to backend...',
+            under_hood_openai: 'Checking OpenAI integration...',
+            under_hood_ready: 'Ready. Connected to GPT.',
+            under_hood_fallback: 'Local mode. Backend unavailable.',
+            under_hood_sending: 'Sending message to backend...',
+            under_hood_processing: 'Processing with GPT...',
+            under_hood_received: 'Response received.',
+            under_hood_error: 'Error. Using local responses.',
+        },
+        hood: {
+            step_init_title: '1. Initialization',
+            step_init_desc: 'useEffect triggers the connection flow when the drawer opens. Avoids unnecessary calls when closed.',
+            step_backend_title: '2. Health check',
+            step_backend_desc: 'Fetch to /api/health. In dev, Vite proxy forwards to localhost:3001. Returns { ok, openai }.',
+            step_openai_title: '3. OpenAI verification',
+            step_openai_desc: 'Backend checks if OPENAI_API_KEY is in .env. The key is never exposed to the client.',
+            step_ready_title: '4. Connected',
+            step_ready_desc: 'Backend and OpenAI OK. Messages will be sent via POST /api/chat.',
+            step_fallback_title: '4. Local mode',
+            step_fallback_desc: 'Backend unavailable. Uses matchUserMessage() and curated responses in assistantMatch.ts.',
+            step_sending_title: '5. Sending',
+            step_sending_desc: 'POST /api/chat with message and history (last 10). JSON in body.',
+            step_processing_title: '6. GPT processing',
+            step_processing_desc: 'Backend calls openai.chat.completions.create() with system prompt, history, and message.',
+            step_received_title: '7. Response',
+            step_received_desc: 'Content returned. Frontend applies markdownToHtml() for **bold** and line breaks.',
+            step_error_title: '7. Fallback',
+            step_error_desc: 'API error. Curated local response is used automatically.',
+        },
+        console: {
+            title: 'Operations Console',
+            subtitle: 'Simulation of a product in operation.',
+            display_title: 'System in operation.',
+            description: 'Simulated event-driven flow: user action → payment → webhook → processing → delivery. This flow represents how Nutrify processes purchases in production.',
+            mrr: 'MRR',
+            active_users: 'Active users',
+            conversions_today: 'Conversions today',
+            reports_generated: 'Reports generated',
+            queue_processed: 'Queue processed',
+            simulate_flow: 'Execute purchase flow',
+            simulating: 'Processing...',
+            activity_log: 'Activity log',
+            empty_log: 'No events yet. Click "Execute flow" to see the simulation.',
+            flow_label: 'System pipeline',
+            flow_complete: 'Flow complete. State updated.',
+            insight: 'This flow simulates the event-driven architecture used in Nutrify: webhooks receive payment events, backend processes and queues jobs, and delivery is automated.',
+            link_nutrify: 'View Nutrify case study →',
         }
     }
 };
 
 export type TranslationKeys =
-    | 'nav.about' | 'nav.experience' | 'nav.projects' | 'nav.contact'
-    | 'hero.badge' | 'hero.headline' | 'hero.subheadline' | 'hero.cta_projects' | 'hero.cta_contact'
+    | 'nav.about' | 'nav.guide' | 'nav.trajectory' | 'nav.projects' | 'nav.console' | 'nav.contact'
+    | 'hero.badge' | 'hero.headline' | 'hero.subheadline' | 'hero.cta_projects' | 'hero.cta_contact' | 'hero.cta_explore'
     | 'hero.proof.faturamento' | 'hero.proof.disponibilidade' | 'hero.proof.equipe'
     | 'hero.proof.label_results' | 'hero.proof.label_status' | 'hero.proof.label_leadership'
     | 'highlights.title' | 'highlights.subtitle' | 'highlights.business' | 'highlights.community' | 'highlights.leadership'
@@ -264,5 +1156,95 @@ export type TranslationKeys =
     | 'projects.nutrify_mobile.case_problem' | 'projects.nutrify_mobile.case_solution' | 'projects.nutrify_mobile.case_results'
     | 'projects.dashboard.title' | 'projects.dashboard.description'
     | 'projects.dashboard.case_problem' | 'projects.dashboard.case_solution' | 'projects.dashboard.case_results'
-    | 'contact.title' | 'contact.headline' | 'contact.subtitle' | 'contact.email_copy' | 'contact.whatsapp'
-    | 'footer.rights';
+    | 'projects.secret.title' | 'projects.secret.description'
+    | 'projects.secret.case_problem' | 'projects.secret.case_solution' | 'projects.secret.case_results'
+    | 'contact.title' | 'contact.eyebrow' | 'contact.headline' | 'contact.lead'
+    | 'contact.value_title' | 'contact.value_body' | 'contact.work_title' | 'contact.work_body'
+    | 'contact.projects_line' | 'contact.availability'
+    | 'contact.trust_1' | 'contact.trust_2' | 'contact.trust_3'
+    | 'contact.email_label' | 'contact.email_copy' | 'contact.email_send'
+    | 'contact.whatsapp_label' | 'contact.whatsapp_desc' | 'contact.whatsapp_cta'
+    | 'contact.project_card_title' | 'contact.project_card_desc' | 'contact.project_card_cta'
+    | 'contact.copied' | 'contact.bridge' | 'contact.whatsapp_prefill'
+    | 'footer.rights'
+    | 'gamification.open_badges' | 'gamification.achievements'
+    | 'gamification.badge_explorer' | 'gamification.badge_system_analyst' | 'gamification.badge_backend_detective'
+    | 'gamification.badge_product_mindset' | 'gamification.badge_saas_operator'
+    | 'exploration.open_panel' | 'exploration.panel_title' | 'exploration.exploration_progress'
+    | 'exploration.insights_title' | 'exploration.insight_placeholder' | 'exploration.dismiss_toast'
+    | 'exploration.stage.initial' | 'exploration.stage.awareness' | 'exploration.stage.understanding' | 'exploration.stage.full_context'
+    | 'exploration.section.trajectory' | 'exploration.section.projects' | 'exploration.section.console' | 'exploration.section.guide'
+    | 'exploration.toast.trajectory_complete' | 'exploration.toast.system_flow_understood' | 'exploration.toast.event_pipeline_observed'
+    | 'exploration.toast.product_logic_recognized' | 'exploration.toast.full_system_interaction'
+    | 'exploration.insight.explorer.title' | 'exploration.insight.explorer.description' | 'exploration.insight.explorer.why'
+    | 'exploration.insight.system_analyst.title' | 'exploration.insight.system_analyst.description' | 'exploration.insight.system_analyst.why'
+    | 'exploration.insight.backend_detective.title' | 'exploration.insight.backend_detective.description' | 'exploration.insight.backend_detective.why'
+    | 'exploration.insight.product_mindset.title' | 'exploration.insight.product_mindset.description' | 'exploration.insight.product_mindset.why'
+    | 'exploration.insight.saas_operator.title' | 'exploration.insight.saas_operator.description' | 'exploration.insight.saas_operator.why'
+    | 'timeline.title' | 'timeline.subtitle' | 'timeline.placeholder_hint'
+    | 'timeline.label_context' | 'timeline.label_challenge' | 'timeline.label_evolution'
+    | 'timeline.phase_origins.title' | 'timeline.phase_origins.summary' | 'timeline.phase_origins.context' | 'timeline.phase_origins.challenge' | 'timeline.phase_origins.evolution'
+    | 'timeline.phase_admin.title' | 'timeline.phase_admin.summary' | 'timeline.phase_admin.context' | 'timeline.phase_admin.challenge' | 'timeline.phase_admin.evolution'
+    | 'timeline.phase_internal_systems.title' | 'timeline.phase_internal_systems.summary' | 'timeline.phase_internal_systems.context' | 'timeline.phase_internal_systems.challenge' | 'timeline.phase_internal_systems.evolution'
+    | 'timeline.phase_automation.title' | 'timeline.phase_automation.summary' | 'timeline.phase_automation.context' | 'timeline.phase_automation.challenge' | 'timeline.phase_automation.evolution'
+    | 'timeline.phase_fullstack.title' | 'timeline.phase_fullstack.summary' | 'timeline.phase_fullstack.context' | 'timeline.phase_fullstack.challenge' | 'timeline.phase_fullstack.evolution'
+    | 'timeline.phase_saas.title' | 'timeline.phase_saas.summary' | 'timeline.phase_saas.context' | 'timeline.phase_saas.challenge' | 'timeline.phase_saas.evolution'
+    | 'timeline.phase_webhooks.title' | 'timeline.phase_webhooks.summary' | 'timeline.phase_webhooks.context' | 'timeline.phase_webhooks.challenge' | 'timeline.phase_webhooks.evolution'
+    | 'timeline.phase_ai.title' | 'timeline.phase_ai.summary' | 'timeline.phase_ai.context' | 'timeline.phase_ai.challenge' | 'timeline.phase_ai.evolution'
+    | 'timeline.phase_junior_dev.year' | 'timeline.phase_junior_dev.title' | 'timeline.phase_junior_dev.summary' | 'timeline.phase_junior_dev.context' | 'timeline.phase_junior_dev.challenge' | 'timeline.phase_junior_dev.evolution'
+    | 'timeline.phase_complex.title' | 'timeline.phase_complex.summary' | 'timeline.phase_complex.context' | 'timeline.phase_complex.challenge' | 'timeline.phase_complex.evolution'
+    | 'timeline.phase_product.title' | 'timeline.phase_product.summary' | 'timeline.phase_product.context' | 'timeline.phase_product.challenge' | 'timeline.phase_product.evolution'
+    | 'story.eyebrow' | 'story.title' | 'story.description' | 'story.placeholder' | 'story.placeholder_hint'
+    | 'story.label_context' | 'story.label_challenge' | 'story.label_evolution' | 'story.label_insight'
+    | 'story.ask_assistant' | 'story.view_projects' | 'story.of' | 'story.chapters_explored' | 'story.journey_complete'
+    | 'story.phase_type.exposure' | 'story.phase_type.operations' | 'story.phase_type.systems' | 'story.phase_type.automation'
+    | 'story.phase_type.fullstack' | 'story.phase_type.saas' | 'story.phase_type.backend' | 'story.phase_type.ai'
+    | 'story.phase_type.ecosystem' | 'story.phase_type.product' | 'story.phase_type.professional'
+    | 'story.phase_origins.title' | 'story.phase_origins.summary' | 'story.phase_origins.context' | 'story.phase_origins.challenge' | 'story.phase_origins.evolution' | 'story.phase_origins.insight'
+    | 'story.phase_admin.title' | 'story.phase_admin.summary' | 'story.phase_admin.context' | 'story.phase_admin.challenge' | 'story.phase_admin.evolution' | 'story.phase_admin.insight'
+    | 'story.phase_internal_systems.title' | 'story.phase_internal_systems.summary' | 'story.phase_internal_systems.context' | 'story.phase_internal_systems.challenge' | 'story.phase_internal_systems.evolution' | 'story.phase_internal_systems.insight'
+    | 'story.phase_automation.title' | 'story.phase_automation.summary' | 'story.phase_automation.context' | 'story.phase_automation.challenge' | 'story.phase_automation.evolution' | 'story.phase_automation.insight'
+    | 'story.phase_fullstack.title' | 'story.phase_fullstack.summary' | 'story.phase_fullstack.context' | 'story.phase_fullstack.challenge' | 'story.phase_fullstack.evolution' | 'story.phase_fullstack.insight'
+    | 'story.phase_saas.title' | 'story.phase_saas.summary' | 'story.phase_saas.context' | 'story.phase_saas.challenge' | 'story.phase_saas.evolution' | 'story.phase_saas.insight'
+    | 'story.phase_webhooks.title' | 'story.phase_webhooks.summary' | 'story.phase_webhooks.context' | 'story.phase_webhooks.challenge' | 'story.phase_webhooks.evolution' | 'story.phase_webhooks.insight'
+    | 'story.phase_ai.title' | 'story.phase_ai.summary' | 'story.phase_ai.context' | 'story.phase_ai.challenge' | 'story.phase_ai.evolution' | 'story.phase_ai.insight'
+    | 'story.phase_complex.title' | 'story.phase_complex.summary' | 'story.phase_complex.context' | 'story.phase_complex.challenge' | 'story.phase_complex.evolution' | 'story.phase_complex.insight'
+    | 'story.phase_product.title' | 'story.phase_product.summary' | 'story.phase_product.context' | 'story.phase_product.challenge' | 'story.phase_product.evolution' | 'story.phase_product.insight'
+    | 'story.phase_junior_dev.period' | 'story.phase_junior_dev.title' | 'story.phase_junior_dev.summary' | 'story.phase_junior_dev.context' | 'story.phase_junior_dev.challenge' | 'story.phase_junior_dev.evolution' | 'story.phase_junior_dev.insight'
+    | 'guide.label' | 'guide.title' | 'guide.subtitle' | 'guide.description' | 'guide.signal_1' | 'guide.signal_2' | 'guide.signal_3'
+    | 'guide.launch' | 'guide.launch_label' | 'guide.empty_state' | 'guide.loading' | 'guide.insight_title' | 'guide.mode_live' | 'guide.mode_curated'
+    | 'guide.security_signal' | 'guide.resilience_signal'
+    | 'guide.cluster.explore_work' | 'guide.cluster.technical_depth' | 'guide.cluster.product_thinking' | 'guide.cluster.current_role'
+    | 'guide.prompt.projects_main' | 'guide.prompt.nutrify' | 'guide.prompt.saas_systems' | 'guide.prompt.stack' | 'guide.prompt.backend' | 'guide.prompt.dashboard'
+    | 'guide.prompt.portfolio_different' | 'guide.prompt.business_projects' | 'guide.prompt.product_engineering'
+    | 'guide.prompt.current_role' | 'guide.prompt.mobile' | 'guide.prompt.building_now'
+    | 'guide.runtime.init' | 'guide.runtime.init_desc' | 'guide.runtime.backend' | 'guide.runtime.backend_desc'
+    | 'guide.runtime.validation' | 'guide.runtime.validation_desc' | 'guide.runtime.ready' | 'guide.runtime.ready_desc'
+    | 'guide.runtime.curated' | 'guide.runtime.curated_desc' | 'guide.runtime.sending' | 'guide.runtime.sending_desc'
+    | 'guide.runtime.processing' | 'guide.runtime.processing_desc' | 'guide.runtime.completed' | 'guide.runtime.completed_desc'
+    | 'guide.runtime.fallback' | 'guide.runtime.fallback_desc'
+    | 'guide.response_current_role_title' | 'guide.response_current_role_body' | 'guide.response_mobile_title' | 'guide.response_mobile_body'
+    | 'assistant.title' | 'assistant.subtitle' | 'assistant.placeholder' | 'assistant.send'
+    | 'assistant.suggested_1' | 'assistant.suggested_2' | 'assistant.suggested_3' | 'assistant.suggested_4' | 'assistant.suggested_5'
+    | 'assistant.response_projects_main_title' | 'assistant.response_projects_main_body'
+    | 'assistant.response_stack_title' | 'assistant.response_stack_body'
+    | 'assistant.response_nutrify_title' | 'assistant.response_nutrify_body'
+    | 'assistant.response_backend_experience_title' | 'assistant.response_backend_experience_body'
+    | 'assistant.response_business_results_title' | 'assistant.response_business_results_body'
+    | 'assistant.response_strongest_area_title' | 'assistant.response_strongest_area_body'
+    | 'assistant.response_portfolio_different_title' | 'assistant.response_portfolio_different_body'
+    | 'assistant.response_dashboard_explain_title' | 'assistant.response_dashboard_explain_body'
+    | 'assistant.response_fallback_title' | 'assistant.response_fallback_body'
+    | 'assistant.under_hood_title' | 'assistant.under_hood_init' | 'assistant.under_hood_backend' | 'assistant.under_hood_openai'
+    | 'assistant.under_hood_ready' | 'assistant.under_hood_fallback' | 'assistant.under_hood_sending' | 'assistant.under_hood_processing'
+    | 'assistant.under_hood_received' | 'assistant.under_hood_error'
+    | 'hood.step_init_title' | 'hood.step_init_desc' | 'hood.step_backend_title' | 'hood.step_backend_desc'
+    | 'hood.step_openai_title' | 'hood.step_openai_desc' | 'hood.step_ready_title' | 'hood.step_ready_desc'
+    | 'hood.step_fallback_title' | 'hood.step_fallback_desc' | 'hood.step_sending_title' | 'hood.step_sending_desc'
+    | 'hood.step_processing_title' | 'hood.step_processing_desc' | 'hood.step_received_title' | 'hood.step_received_desc'
+    | 'hood.step_error_title' | 'hood.step_error_desc'
+    | 'console.title' | 'console.subtitle' | 'console.display_title' | 'console.description'
+    | 'console.mrr' | 'console.active_users' | 'console.conversions_today'
+    | 'console.reports_generated' | 'console.queue_processed' | 'console.simulate_flow' | 'console.simulating'
+    | 'console.activity_log' | 'console.empty_log' | 'console.flow_label' | 'console.flow_complete'
+    | 'console.insight' | 'console.link_nutrify';

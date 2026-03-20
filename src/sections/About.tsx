@@ -52,6 +52,10 @@ export const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
+            <div className="image-minimal">
+              <div className="minimal-overlay"></div>
+              <span className="initials">Pablo Toledo</span>
+            </div>
             <div className="now-card premium">
               <div className="now-indicator">
                 <span className="status-dot pulse"></span>
@@ -66,10 +70,6 @@ export const About = () => {
               </ul>
             </div>
 
-            <div className="image-minimal">
-              <div className="minimal-overlay"></div>
-              <span className="initials">PT</span>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -225,10 +225,11 @@ export const About = () => {
         }
 
         .initials {
-          font-size: 4rem;
+          font-size: clamp(1.5rem, 4vw, 2.5rem);
           font-weight: 900;
-          opacity: 0.1;
           letter-spacing: -0.05em;
+          text-align: center;
+          color: var(--accent);
         }
 
         @media (max-width: 768px) {

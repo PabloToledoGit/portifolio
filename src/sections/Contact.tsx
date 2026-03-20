@@ -1,149 +1,573 @@
 import { useLanguage } from '../i18n/LanguageContext';
 import { motion } from 'framer-motion';
-import { Mail, MessageCircle, Copy, Check } from 'lucide-react';
+import { Mail, MessageCircle, ArrowUpRight, Copy, Check, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 
+const WA_NUMBER = '5524998630185';
+const EMAIL = 'pablotoledoemail@gmail.com';
+
+const itemReveal = {
+  hidden: { opacity: 0, y: 18 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.42, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  },
+};
+
 export const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [copied, setCopied] = useState(false);
-  const email = 'pablotoledoemail@gmail.com';
+
+  const waPrefill = encodeURIComponent(t('contact.whatsapp_prefill'));
+  const waUrl = `https://wa.me/${WA_NUMBER}`;
+  const waProjectUrl = `${waUrl}?text=${waPrefill}`;
 
   const copyEmail = () => {
-    navigator.clipboard.writeText(email);
+    void navigator.clipboard.writeText(EMAIL);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  }
+    setTimeout(() => setCopied(false), 2200);
+  };
 
   return (
     <section id="contact" className="contact section-padding">
+      <div className="contact__glow" aria-hidden />
       <div className="container">
-        <div className="contact-panel">
+        <div className="contact__shell">
+          <header className="contact__header">
+            <motion.span
+              className="contact__eyebrow section-label"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.4 }}
+            >
+              05 // {t('contact.eyebrow')}
+            </motion.span>
+            <motion.h2
+              className="contact__headline text-balance"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+            >
+              {t('contact.headline')}
+            </motion.h2>
+            <motion.p
+              className="contact__lead"
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              {t('contact.lead')}
+            </motion.p>
+            <motion.p
+              className="contact__bridge"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: 0.14 }}
+            >
+              <Sparkles size={14} className="contact__bridge-icon" aria-hidden />
+              {t('contact.bridge')}
+            </motion.p>
+          </header>
+
+          <div className="contact__main">
+            <motion.div
+              className="contact__value"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-60px' }}
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.07 } },
+              }}
+            >
+              <motion.div className="contact__value-block" variants={itemReveal}>
+                <h3 className="contact__value-title">{t('contact.value_title')}</h3>
+                <p className="contact__value-text">{t('contact.value_body')}</p>
+              </motion.div>
+              <motion.div className="contact__value-block" variants={itemReveal}>
+                <h3 className="contact__value-title">{t('contact.work_title')}</h3>
+                <p className="contact__value-text">{t('contact.work_body')}</p>
+              </motion.div>
+              <motion.p className="contact__value-highlight" variants={itemReveal}>
+                {t('contact.projects_line')}
+              </motion.p>
+              <motion.div className="contact__availability" variants={itemReveal}>
+                {t('contact.availability')}
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              className="contact__actions"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-40px' }}
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.09, delayChildren: 0.08 } },
+              }}
+            >
+              <motion.article
+                className="contact-card contact-card--email"
+                variants={itemReveal}
+              >
+                <div className="contact-card__top">
+                  <span className="contact-card__icon-wrap" aria-hidden>
+                    <Mail size={22} strokeWidth={1.75} />
+                  </span>
+                  <div className="contact-card__meta">
+                    <span className="contact-card__label">{t('contact.email_label')}</span>
+                    <span className="contact-card__value">{EMAIL}</span>
+                  </div>
+                </div>
+                <div className="contact-card__footer">
+                  <motion.button
+                    type="button"
+                    className="contact-card__btn contact-card__btn--ghost"
+                    onClick={copyEmail}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {copied ? <Check size={16} className="contact-card__btn-icon contact-card__btn-icon--ok" /> : <Copy size={16} className="contact-card__btn-icon" />}
+                    {copied ? t('contact.copied') : t('contact.email_copy')}
+                  </motion.button>
+                  <motion.a
+                    className="contact-card__btn contact-card__btn--primary"
+                    href={`mailto:${EMAIL}?subject=${encodeURIComponent(language === 'pt' ? 'Contato via portfólio' : 'Portfolio contact')}`}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {t('contact.email_send')}
+                    <ArrowUpRight size={16} />
+                  </motion.a>
+                </div>
+              </motion.article>
+
+              <motion.a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card contact-card--wa"
+                variants={itemReveal}
+              >
+                <div className="contact-card__top">
+                  <span className="contact-card__icon-wrap contact-card__icon-wrap--wa" aria-hidden>
+                    <MessageCircle size={22} strokeWidth={1.75} />
+                  </span>
+                  <div className="contact-card__meta">
+                    <span className="contact-card__label">{t('contact.whatsapp_label')}</span>
+                    <p className="contact-card__desc">{t('contact.whatsapp_desc')}</p>
+                  </div>
+                </div>
+                <span className="contact-card__cta">
+                  {t('contact.whatsapp_cta')}
+                  <ArrowUpRight size={16} />
+                </span>
+              </motion.a>
+
+              <motion.a
+                href={waProjectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card contact-card--project"
+                variants={itemReveal}
+              >
+                <div className="contact-card__top">
+                  <span className="contact-card__icon-wrap contact-card__icon-wrap--accent" aria-hidden>
+                    <ArrowUpRight size={22} strokeWidth={1.75} />
+                  </span>
+                  <div className="contact-card__meta">
+                    <span className="contact-card__label">{t('contact.project_card_title')}</span>
+                    <p className="contact-card__desc">{t('contact.project_card_desc')}</p>
+                  </div>
+                </div>
+                <span className="contact-card__cta contact-card__cta--emphasis">
+                  {t('contact.project_card_cta')}
+                  <ArrowUpRight size={16} />
+                </span>
+              </motion.a>
+            </motion.div>
+          </div>
+
           <motion.div
-            className="contact-info"
-            initial={{ opacity: 0, y: 20 }}
+            className="contact__trust"
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.12 }}
           >
-            <span className="section-label">04 // {t('contact.title')}</span>
-            <h2 className="contact-title text-balance">{t('contact.headline')}</h2>
-            <p className="contact-subtitle">{t('contact.subtitle')}</p>
+            <span className="contact__trust-item">{t('contact.trust_1')}</span>
+            <span className="contact__trust-item">{t('contact.trust_2')}</span>
+            <span className="contact__trust-item">{t('contact.trust_3')}</span>
           </motion.div>
-
-          <div className="contact-actions">
-            <button className="contact-btn email-btn" onClick={copyEmail}>
-              <Mail size={24} />
-              <div className="btn-text">
-                <span className="label">E-mail</span>
-                <span className="value">{email}</span>
-              </div>
-              {copied ? <Check className="copy-icon success" /> : <Copy className="copy-icon" />}
-            </button>
-
-            <a href="https://wa.me/5524998630185" target="_blank" rel="noopener noreferrer" className="contact-btn whatsapp-btn">
-              <MessageCircle size={24} />
-              <div className="btn-text">
-                <span className="label">WhatsApp</span>
-                <span className="value">{t('contact.whatsapp')}</span>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
 
       <style>{`
-        .contact-panel {
-          padding: var(--space-12);
+        .contact {
+          position: relative;
+          overflow: hidden;
           background: var(--surface);
-          border: 1px solid var(--border);
-          border-radius: var(--radius-lg);
-          display: flex;
-          flex-direction: column;
-          gap: var(--space-10);
-          align-items: center;
-          text-align: center;
+          border-top: 1px solid var(--border);
         }
 
-        @media (min-width: 992px) {
-          .contact-panel {
-            flex-direction: row;
+        .contact__glow {
+          pointer-events: none;
+          position: absolute;
+          inset: -20% -10% auto;
+          height: 55%;
+          background: radial-gradient(ellipse 70% 80% at 50% 0%, rgba(255, 255, 255, 0.06), transparent 65%);
+        }
+
+        .contact__shell {
+          position: relative;
+          z-index: 1;
+          max-width: 1120px;
+          margin: 0 auto;
+        }
+
+        .contact__header {
+          text-align: center;
+          max-width: 44rem;
+          margin: 0 auto var(--space-12);
+        }
+
+        .contact__eyebrow {
+          display: block;
+          margin-bottom: var(--space-3);
+        }
+
+        .contact__headline {
+          font-size: clamp(1.75rem, 4vw, 2.75rem);
+          font-weight: 700;
+          letter-spacing: -0.03em;
+          line-height: 1.15;
+          margin: 0 0 var(--space-4);
+        }
+
+        .contact__lead {
+          font-size: clamp(1rem, 1.2vw, 1.125rem);
+          line-height: 1.65;
+          color: var(--muted);
+          margin: 0 0 var(--space-4);
+        }
+
+        .contact__bridge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: var(--space-2);
+          margin: 0;
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: var(--text);
+          padding: var(--space-2) var(--space-4);
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-full);
+        }
+
+        .contact__bridge-icon {
+          flex-shrink: 0;
+          opacity: 0.85;
+        }
+
+        .contact__main {
+          display: grid;
+          gap: var(--space-10);
+          align-items: start;
+        }
+
+        @media (min-width: 900px) {
+          .contact__header {
             text-align: left;
-            justify-content: space-between;
+            margin-left: 0;
+            margin-right: 0;
+            max-width: 36rem;
+          }
+
+          .contact__main {
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+            gap: var(--space-12);
+            align-items: stretch;
           }
         }
 
-        .contact-title {
-          font-size: var(--h2);
-          margin-bottom: var(--space-2);
+        .contact__value {
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-6);
         }
 
-        .contact-subtitle {
-          font-size: 1.25rem;
+        .contact__value-block {
+          padding-bottom: var(--space-5);
+          border-bottom: 1px solid var(--border);
+        }
+
+        .contact__value-block:last-of-type {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        .contact__value-title {
+          font-size: 0.6875rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
           color: var(--muted);
+          margin: 0 0 var(--space-2);
         }
 
-        .contact-actions {
+        .contact__value-text {
+          margin: 0;
+          font-size: 1rem;
+          line-height: 1.65;
+          color: var(--text);
+        }
+
+        .contact__value-highlight {
+          margin: 0;
+          font-size: 0.9375rem;
+          line-height: 1.6;
+          color: var(--muted);
+          padding: var(--space-4);
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: var(--radius-md);
+          border: 1px solid var(--border);
+        }
+
+        .contact__availability {
+          font-size: 0.8125rem;
+          line-height: 1.5;
+          color: var(--muted);
+          padding: var(--space-3) var(--space-4);
+          border-left: 2px solid var(--accent);
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent);
+        }
+
+        .contact__actions {
           display: flex;
           flex-direction: column;
           gap: var(--space-4);
-          width: 100%;
-          max-width: 400px;
         }
 
-        .contact-btn {
+        .contact-card {
           display: flex;
-          align-items: center;
+          flex-direction: column;
           gap: var(--space-4);
           padding: var(--space-5);
-          background: var(--surface2);
-          border: 1px solid var(--border);
           border-radius: var(--radius-md);
-          transition: var(--transition-base);
-          position: relative;
+          border: 1px solid var(--border);
+          background: var(--surface2);
+          text-decoration: none;
+          color: inherit;
+          cursor: pointer;
           text-align: left;
-          width: 100%;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+          transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.2s ease;
         }
 
-        .contact-btn:hover {
-          border-color: var(--muted);
-          background: var(--bg);
+        .contact-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .btn-text {
+        .contact-card--email {
+          cursor: default;
+        }
+
+        .contact-card__top {
           display: flex;
-          flex-direction: column;
+          gap: var(--space-4);
+          align-items: flex-start;
         }
 
-        .btn-text .label {
-          font-size: 10px;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          color: var(--muted);
-          font-weight: 800;
+        .contact-card__icon-wrap {
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 48px;
+          height: 48px;
+          border-radius: var(--radius-sm);
+          background: rgba(255, 255, 255, 0.06);
+          border: 1px solid var(--border);
+          color: var(--text);
         }
 
-        .btn-text .value {
-          font-size: 1rem;
-          font-weight: 600;
-        }
-
-        .copy-icon {
-          position: absolute;
-          right: var(--space-5);
-          color: var(--muted);
-        }
-
-        .copy-icon.success {
+        .contact-card__icon-wrap--wa {
+          background: rgba(37, 211, 102, 0.08);
+          border-color: rgba(37, 211, 102, 0.25);
           color: #4ade80;
         }
 
-        .whatsapp-btn {
-          background: rgba(37, 211, 102, 0.05);
+        .contact-card__icon-wrap--accent {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: var(--accent);
+          color: var(--accent);
+        }
+
+        .contact-card__meta {
+          min-width: 0;
+          flex: 1;
+        }
+
+        .contact-card__label {
+          display: block;
+          font-size: 0.625rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          color: var(--muted);
+          margin-bottom: var(--space-1);
+        }
+
+        .contact-card__value {
+          font-size: 0.9375rem;
+          font-weight: 600;
+          word-break: break-all;
+        }
+
+        .contact-card__desc {
+          margin: 0;
+          font-size: 0.8125rem;
+          line-height: 1.5;
+          color: var(--muted);
+        }
+
+        .contact-card__footer {
+          display: flex;
+          flex-wrap: wrap;
+          gap: var(--space-2);
+          padding-top: var(--space-1);
+        }
+
+        .contact-card__btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: var(--space-2);
+          padding: var(--space-2) var(--space-4);
+          font-size: 0.8125rem;
+          font-weight: 600;
+          border-radius: var(--radius-sm);
+          border: none;
+          cursor: pointer;
+          text-decoration: none;
+          transition: opacity var(--transition-fast), background var(--transition-fast);
+        }
+
+        .contact-card__btn--ghost {
+          background: transparent;
+          border: 1px solid var(--border);
+          color: var(--muted);
+        }
+
+        .contact-card__btn--ghost:hover {
+          color: var(--text);
+          border-color: var(--muted);
+          background: rgba(255, 255, 255, 0.04);
+        }
+
+        .contact-card__btn--primary {
+          flex: 1;
+          min-width: 140px;
+          background: var(--accent);
+          color: var(--bg);
+        }
+
+        .contact-card__btn--primary:hover {
+          opacity: 0.92;
+        }
+
+        .contact-card__btn-icon--ok {
+          color: #4ade80;
+        }
+
+        .contact-card__cta {
+          display: inline-flex;
+          align-items: center;
+          gap: var(--space-2);
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: var(--text);
+          margin-top: auto;
+        }
+
+        .contact-card__cta--emphasis {
+          color: var(--accent);
+        }
+
+        .contact-card--wa:hover .contact-card__cta,
+        .contact-card--project:hover .contact-card__cta {
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+
+        .contact-card--wa {
           border-color: rgba(37, 211, 102, 0.2);
         }
 
-        .whatsapp-btn:hover {
-          background: rgba(37, 211, 102, 0.1);
-          border-color: rgba(37, 211, 102, 0.4);
+        .contact-card--wa:hover {
+          border-color: rgba(37, 211, 102, 0.45);
+        }
+
+        .contact-card--project {
+          border-color: rgba(255, 255, 255, 0.15);
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), var(--surface2));
+        }
+
+        .contact-card--project:hover {
+          border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        .contact__trust {
+          display: flex;
+          flex-wrap: wrap;
+          gap: var(--space-3);
+          justify-content: center;
+          margin-top: var(--space-12);
+          padding-top: var(--space-8);
+          border-top: 1px solid var(--border);
+        }
+
+        @media (min-width: 900px) {
+          .contact__trust {
+            justify-content: flex-start;
+          }
+        }
+
+        .contact__trust-item {
+          font-size: 0.6875rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: var(--muted);
+          padding: var(--space-2) var(--space-3);
+          border-radius: var(--radius-full);
+          border: 1px solid var(--border);
+          background: rgba(255, 255, 255, 0.02);
+        }
+
+        @media (max-width: 899px) {
+          .contact__header {
+            text-align: center;
+          }
+
+          .contact__bridge {
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .contact-card__footer {
+            flex-direction: column;
+          }
+
+          .contact-card__btn--primary {
+            width: 100%;
+          }
         }
       `}</style>
     </section>

@@ -1,14 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { useExperience } from '../context/ExperienceContext';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Github } from 'lucide-react';
 import { ProjectModal } from '../components/ProjectModal';
 
 export const Projects = () => {
   const { t } = useLanguage();
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const { trackInteraction, state } = useExperience();
+  const [selectedProject, setSelectedProject] = useState<{
+    id: string;
+    title: string;
+    description: string;
+    stack: string[];
+    impact?: string[];
+  } | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const hasRecordedVisit = useRef(false);
 
-  const projects = [
+  useEffect(() => {
+    if (!sectionRef.current || hasRecordedVisit.current) return;
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          hasRecordedVisit.current = true;
+          trackInteraction('visit_projects');
+        }
+      },
+      { threshold: 0.2 }
+    );
+    obs.observe(sectionRef.current);
+    return () => obs.disconnect();
+  }, [trackInteraction]);
+
+  const baseProjects = [
     {
       id: 'nutrify_web',
       title: t('projects.nutrify_web.title'),
@@ -32,8 +57,20 @@ export const Projects = () => {
     },
   ];
 
+  const secretUnlocked = state.unlockedProjectIds.includes('secret');
+  const secretProject = secretUnlocked
+    ? {
+        id: 'secret',
+        title: t('projects.secret.title'),
+        description: t('projects.secret.description'),
+        stack: ['Arquitetura', 'Event-Driven', 'SaaS'],
+        impact: ['Conteúdo Desbloqueado', 'Visão de Sistema'],
+      }
+    : null;
+  const projects = secretProject ? [...baseProjects, secretProject] : baseProjects;
+
   return (
-    <section id="projects" className="projects section-padding">
+    <section id="projects" className="projects section-padding" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
           <span className="section-label">03 // {t('projects.title')}</span>

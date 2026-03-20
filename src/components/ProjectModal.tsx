@@ -1,6 +1,9 @@
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import type { TranslationKeys } from '../i18n/translations';
+import { useExperience } from '../context/ExperienceContext';
 
 interface ProjectModalProps {
     project: {
@@ -14,6 +17,16 @@ interface ProjectModalProps {
 
 export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     const { t } = useLanguage();
+    const { trackInteraction, state } = useExperience();
+
+    useEffect(() => {
+        if (project) {
+            trackInteraction('open_case_study');
+            if (project.id === 'secret' && (state.actions.discover_hidden ?? 0) === 0) {
+                trackInteraction('discover_hidden');
+            }
+        }
+    }, [project?.id, trackInteraction, state.actions.discover_hidden]);
 
     if (!project) return null;
 
@@ -44,17 +57,17 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                             <div className="modal-body">
                                 <section className="modal-section">
                                     <h3 className="section-subtitle">{t('projects.problem')}</h3>
-                                    <p>{t(`projects.${project.id}.case_problem` as any)}</p>
+                                    <p>{t(`projects.${project.id}.case_problem` as TranslationKeys)}</p>
                                 </section>
 
                                 <section className="modal-section">
                                     <h3 className="section-subtitle">{t('projects.solution')}</h3>
-                                    <p>{t(`projects.${project.id}.case_solution` as any)}</p>
+                                    <p>{t(`projects.${project.id}.case_solution` as TranslationKeys)}</p>
                                 </section>
 
                                 <section className="modal-section">
                                     <h3 className="section-subtitle">{t('projects.results')}</h3>
-                                    <p>{t(`projects.${project.id}.case_results` as any)}</p>
+                                    <p>{t(`projects.${project.id}.case_results` as TranslationKeys)}</p>
                                 </section>
                             </div>
                         </div>
