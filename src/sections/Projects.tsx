@@ -5,16 +5,23 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, Github } from 'lucide-react';
 import { ProjectModal } from '../components/ProjectModal';
 
+export type PortfolioProject = {
+  id: string;
+  title: string;
+  description: string;
+  stack: string[];
+  impact: string[];
+  statusLabel?: string;
+  categoryLabel?: string;
+  highlight?: string;
+  /** Default true; SIGBL has no public repo link */
+  showGithub?: boolean;
+};
+
 export const Projects = () => {
   const { t } = useLanguage();
   const { trackInteraction, state } = useExperience();
-  const [selectedProject, setSelectedProject] = useState<{
-    id: string;
-    title: string;
-    description: string;
-    stack: string[];
-    impact?: string[];
-  } | null>(null);
+  const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const hasRecordedVisit = useRef(false);
 
@@ -33,7 +40,7 @@ export const Projects = () => {
     return () => obs.disconnect();
   }, [trackInteraction]);
 
-  const baseProjects = [
+  const baseProjects: PortfolioProject[] = [
     {
       id: 'nutrify_web',
       title: t('projects.nutrify_web.title'),
@@ -55,10 +62,25 @@ export const Projects = () => {
       stack: ['React', 'TypeScript', 'Realtime Metrics'],
       impact: ['Métricas em Tempo Real', 'Enterprise Grade'],
     },
+    {
+      id: 'sigbl',
+      title: t('projects.sigbl.title'),
+      description: t('projects.sigbl.description'),
+      stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js'],
+      impact: [
+        t('projects.sigbl.impact_line_1'),
+        t('projects.sigbl.impact_line_2'),
+        t('projects.sigbl.impact_line_3'),
+      ],
+      statusLabel: t('projects.sigbl.status_badge'),
+      categoryLabel: t('projects.sigbl.category_tag'),
+      highlight: t('projects.sigbl.highlight'),
+      showGithub: false,
+    },
   ];
 
   const secretUnlocked = state.unlockedProjectIds.includes('secret');
-  const secretProject = secretUnlocked
+  const secretProject: PortfolioProject | null = secretUnlocked
     ? {
         id: 'secret',
         title: t('projects.secret.title'),
@@ -81,7 +103,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="project-feature"
+              className={`project-feature ${project.id === 'sigbl' ? 'project-feature--institutional' : ''}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -89,19 +111,36 @@ export const Projects = () => {
             >
               <div className="project-media">
                 <div className="media-placeholder">
-                  <span>{project.title}</span>
+                  <span>{project.id === 'sigbl' ? t('projects.sigbl.media_short') : project.title}</span>
                 </div>
               </div>
 
               <div className="project-info">
+                {(project.statusLabel || project.categoryLabel) && (
+                  <div className="project-meta" aria-label={t('projects.sigbl.meta_aria')}>
+                    {project.statusLabel ? (
+                      <span className="project-status">{project.statusLabel}</span>
+                    ) : null}
+                    {project.categoryLabel ? (
+                      <span className="project-category">{project.categoryLabel}</span>
+                    ) : null}
+                  </div>
+                )}
+
                 <div className="project-tags">
-                  {project.stack.map(tag => <span key={tag} className="tag">{tag}</span>)}
+                  {project.stack.map((tag) => (
+                    <span key={tag} className="tag">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-desc">{project.description}</p>
 
+                {project.highlight ? <p className="project-highlight">{project.highlight}</p> : null}
+
                 <div className="project-outcomes">
-                  {project.impact.map(item => (
+                  {project.impact.map((item) => (
                     <div key={item} className="outcome-item">
                       <div className="outcome-dot"></div>
                       <span>{item}</span>
@@ -111,14 +150,17 @@ export const Projects = () => {
 
                 <div className="project-links">
                   <button
+                    type="button"
                     onClick={() => setSelectedProject(project)}
                     className="project-link btn-link"
                   >
                     {t('projects.view_case')} <ArrowUpRight size={16} />
                   </button>
-                  <a href="#" className="project-link secondary">
-                    <Github size={16} /> GitHub
-                  </a>
+                  {project.showGithub !== false ? (
+                    <a href="#" className="project-link secondary">
+                      <Github size={16} /> GitHub
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </motion.div>
@@ -184,6 +226,58 @@ export const Projects = () => {
           font-weight: 800;
           font-size: 2rem;
           opacity: 0.5;
+        }
+
+        .project-feature--institutional .media-placeholder {
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), var(--surface2));
+          opacity: 0.85;
+          font-size: clamp(1.25rem, 3.5vw, 2rem);
+          letter-spacing: 0.06em;
+          text-align: center;
+          padding: var(--space-4);
+          line-height: 1.25;
+        }
+
+        .project-feature--institutional .project-media {
+          border-color: rgba(255, 255, 255, 0.14);
+        }
+
+        .project-meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: var(--space-2);
+          align-items: center;
+        }
+
+        .project-status {
+          font-size: 10px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: var(--accent);
+        }
+
+        .project-category {
+          font-size: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--muted);
+          padding: 4px 10px;
+          border-radius: var(--radius-full);
+          border: 1px solid var(--border);
+          background: rgba(255, 255, 255, 0.03);
+        }
+
+        .project-highlight {
+          margin: 0;
+          font-size: 0.9375rem;
+          line-height: 1.55;
+          color: var(--text);
+          padding: var(--space-3) var(--space-4);
+          background: rgba(255, 255, 255, 0.04);
+          border-left: 2px solid var(--accent);
+          border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
         }
 
         .project-info {

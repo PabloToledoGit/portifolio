@@ -15,6 +15,7 @@ export type ActionType =
   | 'assistant_message'
   | 'expand_timeline_phase'
   | 'open_case_study'
+  | 'open_sigbl_case'
   | 'simulate_dashboard'
   | 'visit_timeline'
   | 'visit_projects'
@@ -52,6 +53,7 @@ const BADGE_TO_INSIGHT: Record<string, InsightId> = {
   backend_detective: 'backend_detective',
   product_mindset: 'product_mindset',
   saas_operator: 'saas_operator',
+  social_impact: 'social_impact',
 };
 
 const XP_REWARDS: Partial<Record<ActionType, number>> = {
@@ -59,6 +61,7 @@ const XP_REWARDS: Partial<Record<ActionType, number>> = {
   assistant_message: 5,
   expand_timeline_phase: 15,
   open_case_study: 20,
+  open_sigbl_case: 20,
   simulate_dashboard: 30,
   visit_timeline: 10,
   visit_projects: 10,
@@ -75,6 +78,7 @@ const initialState: ExperienceState = {
     assistant_message: 0,
     expand_timeline_phase: 0,
     open_case_study: 0,
+    open_sigbl_case: 0,
     simulate_dashboard: 0,
     visit_timeline: 0,
     visit_projects: 0,
@@ -102,7 +106,7 @@ function migrateFromV1(): ExperienceState {
       xp: parsed.xp ?? 0,
       unlockedInsights: insights,
       unlockedProjectIds: unlocked,
-      actions: parsed.actions ?? initialState.actions,
+      actions: { ...initialState.actions, ...(parsed.actions ?? {}) },
       timelinePhasesVisited: new Set(parsed.timelinePhasesVisited ?? []),
       toastQueue: [],
     };
@@ -119,6 +123,7 @@ function loadState(): ExperienceState {
       return {
         ...initialState,
         ...parsed,
+        actions: { ...initialState.actions, ...(parsed.actions ?? {}) },
         timelinePhasesVisited: new Set(parsed.timelinePhasesVisited ?? []),
         toastQueue: [],
       };

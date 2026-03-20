@@ -14,7 +14,8 @@ export type InsightId =
   | 'system_analyst'
   | 'backend_detective'
   | 'product_mindset'
-  | 'saas_operator';
+  | 'saas_operator'
+  | 'social_impact';
 
 export interface ExperienceStateForConditions {
   actions: Record<string, number>;
@@ -48,7 +49,7 @@ export interface Insight {
   unlocksSecret?: boolean;
 }
 
-const allPhases = 11;
+const allPhases = 12;
 
 export const INSIGHTS: Insight[] = [
   {
@@ -94,6 +95,15 @@ export const INSIGHTS: Insight[] = [
       (s.actions.simulate_dashboard ?? 0) >= 1 &&
       (s.actions.open_case_study ?? 0) >= 2 &&
       !s.unlockedInsights.includes('saas_operator'),
+  },
+  {
+    id: 'social_impact',
+    titleKey: 'exploration.insight.social_impact.title',
+    descriptionKey: 'exploration.insight.social_impact.description',
+    whyKey: 'exploration.insight.social_impact.why',
+    toastKey: 'exploration.toast.social_impact_system',
+    condition: (s) =>
+      (s.actions.open_sigbl_case ?? 0) >= 1 && !s.unlockedInsights.includes('social_impact'),
   },
 ];
 

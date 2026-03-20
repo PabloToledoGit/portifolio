@@ -2,6 +2,7 @@ export type AssistantTopicId =
   | 'projects_main'
   | 'stack'
   | 'nutrify'
+  | 'sigbl'
   | 'backend_experience'
   | 'business_results'
   | 'strongest_area'
@@ -30,6 +31,27 @@ export const assistantTopics: AssistantTopic[] = [
     id: 'nutrify',
     keywords: ['nutrify', 'explain', 'tell', 'about', 'product'],
     keywordsPt: ['nutrify', 'explicar', 'conte', 'sobre', 'produto'],
+  },
+  {
+    id: 'sigbl',
+    keywords: [
+      'sigbl',
+      'milk bank',
+      'human milk',
+      'donor',
+      'healthcare',
+      'volta redonda',
+      'institutional',
+    ],
+    keywordsPt: [
+      'sigbl',
+      'banco de leite',
+      'leite humano',
+      'doadora',
+      'doador',
+      'volta redonda',
+      'institucional',
+    ],
   },
   {
     id: 'backend_experience',

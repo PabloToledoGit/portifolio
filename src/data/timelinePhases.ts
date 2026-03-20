@@ -129,4 +129,15 @@ export const timelinePhases: TimelinePhase[] = [
     tech: ['React', 'Node.js', 'Firebase', 'Flutter', 'APIs'],
     milestoneRef: 'experience.sels_jr',
   },
+  {
+    id: 'sigbl_milk_bank',
+    yearLabel: '2025–2026',
+    titleKey: 'timeline.phase_sigbl_milk_bank.title',
+    summaryKey: 'timeline.phase_sigbl_milk_bank.summary',
+    detailContextKey: 'timeline.phase_sigbl_milk_bank.context',
+    detailChallengeKey: 'timeline.phase_sigbl_milk_bank.challenge',
+    detailEvolutionKey: 'timeline.phase_sigbl_milk_bank.evolution',
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'API-ready'],
+    milestoneRef: 'experience.sigbl',
+  },
 ];

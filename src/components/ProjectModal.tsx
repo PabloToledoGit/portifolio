@@ -22,6 +22,9 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     useEffect(() => {
         if (project) {
             trackInteraction('open_case_study');
+            if (project.id === 'sigbl') {
+                trackInteraction('open_sigbl_case');
+            }
             if (project.id === 'secret' && (state.actions.discover_hidden ?? 0) === 0) {
                 trackInteraction('discover_hidden');
             }
@@ -69,6 +72,23 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                     <h3 className="section-subtitle">{t('projects.results')}</h3>
                                     <p>{t(`projects.${project.id}.case_results` as TranslationKeys)}</p>
                                 </section>
+
+                                {project.id === 'sigbl' && (
+                                    <>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.modal_architecture')}</h3>
+                                            <p>{t('projects.sigbl.case_architecture')}</p>
+                                        </section>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.modal_features')}</h3>
+                                            <p>{t('projects.sigbl.case_features')}</p>
+                                        </section>
+                                        <section className="modal-section">
+                                            <h3 className="section-subtitle">{t('projects.modal_status_next')}</h3>
+                                            <p>{t('projects.sigbl.case_status_next')}</p>
+                                        </section>
+                                    </>
+                                )}
                             </div>
                         </div>
                     </motion.div>

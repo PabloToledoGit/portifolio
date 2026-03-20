@@ -79,7 +79,13 @@ export const translations = {
                 company: 'Sarton',
                 period: 'Anterior',
                 description: 'Automação de workflows internos e gestão de infraestrutura.',
-            }
+            },
+            sigbl: {
+                role: 'Arquiteto & desenvolvedor (produto em construção)',
+                company: 'SIGBL — Banco de Leite Humano',
+                period: 'Em desenvolvimento',
+                description: 'Plataforma digital para gestão operacional de banco de leite humano, com foco em implementação real em Volta Redonda (RJ).',
+            },
         },
         projects: {
             title: 'Projetos em Destaque',
@@ -89,6 +95,9 @@ export const translations = {
             problem: 'O Problema',
             solution: 'A Solução',
             results: 'Resultados',
+            modal_architecture: 'Arquitetura e decisões técnicas',
+            modal_features: 'Funcionalidades principais',
+            modal_status_next: 'Estado atual e próximos passos',
             nutrify_web: {
                 title: 'Nutrify Web',
                 description: 'Sistema inteligente de planos nutricionais com IA (OpenAI) e checkout Mercado Pago.',
@@ -103,19 +112,45 @@ export const translations = {
                 case_solution: 'Desenvolvimento de app Flutter com camada de Visão Computacional (TensorFlow/MLKit) para identificação automática de alimentos via câmera.',
                 case_results: 'Melhoria significativa na experiência do usuário e precisão na identificação automática de alimentos.',
             },
-            secret: {
-                title: 'Visão de Arquitetura',
-                description: 'Conteúdo desbloqueado: visão de como sistemas SaaS reais são estruturados.',
-                case_problem: 'Este bloco é exibido quando você desbloqueia o badge SaaS Operator — explorando o assistente, abrindo case studies e simulando o dashboard.',
-                case_solution: 'Arquitetura event-driven: webhooks recebem eventos, filas processam jobs, métricas são atualizadas. O console simulado demonstra esse fluxo de forma didática.',
-                case_results: 'Comunicação de maturidade técnica: o recrutador vê que você entende sistemas em operação, não apenas interfaces.',
-            },
             dashboard: {
                 title: 'Dashboard Avançado',
                 description: 'Painel de administração com métricas de anúncios em tempo real.',
                 case_problem: 'Fragmentação de dados de marketing que impedia a tomada de decisão rápida sobre orçamentos de anúncios.',
                 case_solution: 'Painel construído em React + TypeScript com sincronização de dados via WebSockets para visualização de métricas de ROI e CPA instantâneas.',
                 case_results: 'Centralização de dados críticos que permitiu uma gestão mais eficiente da verba de marketing e decisões baseadas em ROI real.',
+            },
+            sigbl: {
+                title: 'SIGBL — Sistema Integrado de Gestão do Banco de Leite',
+                description:
+                    'Plataforma para gerir, otimizar e digitalizar operações de banco de leite humano: rastreio de doadoras, estoque e fluxos de trabalho. Produto real em desenvolvimento, preparado para uso institucional.',
+                status_badge: 'Em desenvolvimento',
+                category_tag: 'Saúde · Impacto social',
+                highlight:
+                    'Em preparação para implementação em um banco de leite humano real em Volta Redonda (RJ). Não é conceito acadêmico: é sistema pensado para operação e escala.',
+                media_short: 'SIGBL',
+                meta_aria: 'Status e categoria do projeto',
+                impact_line_1: 'Impacto social: saúde materno-infantil',
+                impact_line_2: 'Arquitetura modular e escalável',
+                impact_line_3: 'Pronto para integrações futuras (ex.: sistemas de saúde)',
+                case_problem:
+                    'Operações de banco de leite muitas vezes dependem de processos manuais ou ferramentas fragmentadas, gerando ineficiência, pouca visibilidade e dificuldade para rastrear doadoras, coletas e estoque com segurança e rastreabilidade.',
+                case_solution:
+                    'O SIGBL centraliza a operação numa única plataforma web: cadastro e gestão de doadoras, registro de coletas, controle de inventário, fluxos administrativos e painéis para apoio à decisão. Arquitetura modular por funcionalidades, código sustentável e preparação para camada backend/API e expansão mobile (ex.: Flutter), alinhada a requisitos reais de saúde.',
+                case_results:
+                    'Potencial de melhorar eficiência operacional, rastreabilidade e engajamento de doadoras; reduzir retrabalho manual; e apoiar profissionais de saúde com dados mais claros. O objetivo é adoção institucional com impacto direto na qualidade do serviço ao recém-nascido e à família.',
+                case_architecture:
+                    'Frontend em React (Vite) e TypeScript, estilização com Tailwind CSS, organização por features para manter o domínio (doadoras, coletas, estoque, relatórios) explícito e evolutivo. Camada de API e persistência em evolução (Node.js), pensada para integrações futuras com sistemas hospitalares ou protocolos institucionais.',
+                case_features:
+                    'Gestão de doadoras; rastreio de coletas de leite; controle e monitoramento de estoque; gestão de fluxos e processos; painel administrativo; visualização de dados e relatórios; base para analytics operacional; espaço para evolução com gamificação voltada ao engajamento de doadoras (opcional, ética e compliance em primeiro lugar).',
+                case_status_next:
+                    'Status: em desenvolvimento ativo. Próximos passos: validação com o banco de leite humano de Volta Redonda, refinamento de fluxos clínicos e administrativos, endurecimento de segurança e privacidade de dados, piloto controlado e evolução da API para integrações.',
+            },
+            secret: {
+                title: 'Visão de Arquitetura',
+                description: 'Conteúdo desbloqueado: visão de como sistemas SaaS reais são estruturados.',
+                case_problem: 'Este bloco é exibido quando você desbloqueia o badge SaaS Operator — explorando o assistente, abrindo case studies e simulando o dashboard.',
+                case_solution: 'Arquitetura event-driven: webhooks recebem eventos, filas processam jobs, métricas são atualizadas. O console simulado demonstra esse fluxo de forma didática.',
+                case_results: 'Comunicação de maturidade técnica: o recrutador vê que você entende sistemas em operação, não apenas interfaces.',
             },
         },
         contact: {
@@ -156,6 +191,7 @@ export const translations = {
             badge_backend_detective: 'Backend Detective',
             badge_product_mindset: 'Product Mindset',
             badge_saas_operator: 'SaaS Operator',
+            badge_social_impact: 'Impacto social',
         },
         exploration: {
             open_panel: 'Ver progresso de exploração',
@@ -182,6 +218,7 @@ export const translations = {
                 event_pipeline_observed: 'Pipeline de eventos observado.',
                 product_logic_recognized: 'Lógica de produto reconhecida.',
                 full_system_interaction: 'Interação completa com o sistema.',
+                social_impact_system: 'Sistema de impacto social reconhecido.',
             },
             insight: {
                 explorer: {
@@ -208,6 +245,11 @@ export const translations = {
                     title: 'Interação completa com o sistema',
                     description: 'Você simulou o fluxo de compra e analisou múltiplos cases, compreendendo o sistema como um todo.',
                     why: 'Comunica maturidade em sistemas SaaS e visão de produto.',
+                },
+                social_impact: {
+                    title: 'Sistema de impacto social',
+                    description: 'Você abriu o case study do SIGBL — plataforma em desenvolvimento para banco de leite humano.',
+                    why: 'Mostra construção de produtos com relevância institucional e impacto em saúde, além de código comercial.',
                 },
             },
         },
@@ -281,6 +323,13 @@ export const translations = {
                 context: 'Atuação atual como desenvolvedor júnior, desenvolvendo sistemas web e aplicações mobile em ambientes de produção reais. Responsabilidades: desenvolvimento de sistemas web, integração backend, implementação de UI, desenvolvimento mobile com Flutter, manutenção e evolução de sistemas existentes.',
                 challenge: 'Entregar features prontas para produção e manter qualidade dos sistemas.',
                 evolution: 'De construtor independente para desenvolvedor profissional em ambientes de equipe.',
+            },
+            phase_sigbl_milk_bank: {
+                title: 'Sistemas de saúde e impacto social (SIGBL)',
+                summary: 'Plataforma em desenvolvimento para gestão de banco de leite humano.',
+                context: 'Construção do SIGBL — Sistema Integrado de Gestão do Banco de Leite — voltado a operações reais: doadoras, coletas, estoque e fluxos administrativos, com foco em implementação em banco de leite humano em Volta Redonda (RJ).',
+                challenge: 'Traduzir processos clínicos e administrativos em software confiável, seguro e adotável por instituições.',
+                evolution: 'Ampliação do portfólio para produtos com impacto social direto e requisitos de governança e escala.',
             },
             phase_complex: {
                 title: 'Desenvolvimento multi-sistema e ecossistema SaaS',
@@ -490,10 +539,11 @@ export const translations = {
             topic_business_results: 'business_results',
             topic_strongest_area: 'strongest_area',
             topic_portfolio_different: 'portfolio_different',
+            topic_sigbl: 'sigbl',
             topic_dashboard_explain: 'dashboard_explain',
             topic_fallback: 'fallback',
             response_projects_main_title: 'Principais Projetos',
-            response_projects_main_body: 'Os projetos em destaque são: Nutrify Web (sistema de planos nutricionais com IA e checkout Mercado Pago), Nutrify Mobile (app Flutter com Visão Computacional para escaneamento de refeições) e Dashboard Avançado (painel com métricas de anúncios em tempo real via WebSockets). Cada um resolve um problema de negócio concreto com stack adequado.',
+            response_projects_main_body: 'Os projetos em destaque incluem: Nutrify Web (planos nutricionais com IA e checkout Mercado Pago), Nutrify Mobile (Flutter com Visão Computacional), Dashboard Avançado (métricas em tempo real) e o SIGBL — Sistema Integrado de Gestão do Banco de Leite (plataforma em desenvolvimento para operação real de banco de leite humano, com implementação prevista em Volta Redonda, RJ). Cada um endereça um problema concreto com stack e arquitetura adequadas.',
             response_stack_title: 'Stack Técnico',
             response_stack_body: 'Frontend: React, TypeScript, Framer Motion. Backend: Node.js, REST APIs, Webhooks. Mobile: Flutter, Dart. IA: OpenAI API, integrações. Infra: automação, workflows. Pagamentos: Mercado Pago. Foco em ecossistemas de alto desempenho e sistemas escaláveis.',
             response_nutrify_title: 'Nutrify',
@@ -504,6 +554,9 @@ export const translations = {
             response_business_results_body: 'Faturamento acima de R$ 150k no Nutrify. Liderança de equipe de 6 pessoas. Zero falhas de integração em processamento de pagamentos. Centralização de dados de marketing para decisões baseadas em ROI. Produtos que escalam e geram valor recorrente.',
             response_strongest_area_title: 'Área de Destaque',
             response_strongest_area_body: 'Arquitetura de sistemas que combinam frontend performático, backend robusto, integrações críticas (pagamentos, IA) e dados em tempo real. Visão de produto: entender o problema, escolher a stack e entregar impacto mensurável.',
+            response_sigbl_title: 'SIGBL — Banco de leite humano',
+            response_sigbl_body:
+                'É um sistema real em desenvolvimento (não é mock acadêmico): o SIGBL — Sistema Integrado de Gestão do Banco de Leite — digitaliza e organiza operações de banco de leite humano (doadoras, coletas, estoque, fluxos administrativos e relatórios). Está sendo preparado para implementação junto a um banco de leite humano local em Volta Redonda (RJ). Stack: React (Vite), TypeScript, Tailwind; arquitetura modular; evolução prevista com API/Node e possível app Flutter. Objetivo: eficiência, rastreabilidade e impacto social em saúde materno-infantil.',
             response_portfolio_different_title: 'O que torna este portfólio diferente',
             response_portfolio_different_body: 'Comporta-se como um produto: assistente integrado, timeline narrativa interativa, dashboard simulado e gamificação sutil. Demonstra pensamento de produto, não apenas listagem de projetos. Cada seção comunica decisões técnicas e resultados de negócio.',
             response_dashboard_explain_title: 'Sobre o painel',
@@ -641,7 +694,13 @@ export const translations = {
                 company: 'Sarton',
                 period: 'Previous',
                 description: 'Automation of internal workflows and infrastructure management.',
-            }
+            },
+            sigbl: {
+                role: 'Architect & developer (product in development)',
+                company: 'SIGBL — Human Milk Bank',
+                period: 'In development',
+                description: 'Digital platform for human milk bank operations, focused on real-world rollout in Volta Redonda, Brazil.',
+            },
         },
         projects: {
             title: 'Featured Projects',
@@ -651,6 +710,9 @@ export const translations = {
             problem: 'The Problem',
             solution: 'The Solution',
             results: 'Results',
+            modal_architecture: 'Architecture & technical decisions',
+            modal_features: 'Core features',
+            modal_status_next: 'Current status & next steps',
             nutrify_web: {
                 title: 'Nutrify Web',
                 description: 'Intelligent nutritional plan system with AI (OpenAI) and Mercado Pago checkout.',
@@ -665,19 +727,45 @@ export const translations = {
                 case_solution: 'Development of a Flutter app with a Computer Vision layer (TensorFlow/MLKit) for automatic food identification via camera.',
                 case_results: 'Significant improvement in user experience and high accuracy in automatic food identification.',
             },
-            secret: {
-                title: 'Architecture Vision',
-                description: 'Unlocked content: vision of how real SaaS systems are structured.',
-                case_problem: 'This block is shown when you unlock the SaaS Operator badge — by exploring the assistant, opening case studies, and simulating the dashboard.',
-                case_solution: 'Event-driven architecture: webhooks receive events, queues process jobs, metrics update. The simulated console demonstrates this flow in an educational way.',
-                case_results: 'Technical maturity communication: the recruiter sees you understand systems in operation, not just interfaces.',
-            },
             dashboard: {
                 title: 'Advanced Dashboard',
                 description: 'Admin panel with real-time ad metrics.',
                 case_problem: 'Fragmented marketing data that prevented rapid decision-making regarding ad budgets.',
                 case_solution: 'Dashboard built in React + TypeScript with data synchronization via WebSockets for instantaneous ROI and CPA metric visualization.',
                 case_results: 'Centralization of critical data allowing for more efficient marketing budget management and ROI-based decisions.',
+            },
+            sigbl: {
+                title: 'SIGBL — Integrated Human Milk Bank Management System',
+                description:
+                    'A platform to manage, optimize, and digitize human milk bank operations: donor tracking, inventory, and workflows. A real product in development, designed for institutional deployment.',
+                status_badge: 'In development',
+                category_tag: 'Healthcare · Social impact',
+                highlight:
+                    'Being prepared for implementation at a real human milk bank in Volta Redonda, RJ, Brazil. Not an academic mock — built for real operations and scale.',
+                media_short: 'SIGBL',
+                meta_aria: 'Project status and category',
+                impact_line_1: 'Social impact: maternal & infant health',
+                impact_line_2: 'Modular, scalable architecture',
+                impact_line_3: 'Ready for future integrations (e.g. health systems)',
+                case_problem:
+                    'Milk bank operations often rely on manual steps or fragmented tools, causing inefficiency, limited visibility, and difficulty tracking donors, collections, and inventory with full traceability.',
+                case_solution:
+                    'SIGBL centralizes operations in one web platform: donor management, collection logging, inventory control, administrative workflows, and decision-oriented dashboards. Feature-based modular architecture, maintainable codebase, and an evolving API layer (Node.js) with optional mobile expansion (e.g. Flutter), aligned with real healthcare constraints.',
+                case_results:
+                    'Potential to improve operational efficiency, traceability, and donor engagement; reduce manual rework; and support clinical staff with clearer data. Goal: institutional adoption with direct impact on service quality for newborns and families.',
+                case_architecture:
+                    'Frontend: React (Vite), TypeScript, Tailwind CSS; structure organized by features so domains (donors, collections, inventory, reporting) stay explicit and evolvable. Backend/API and persistence in progress, designed for future integration with hospital systems or institutional protocols.',
+                case_features:
+                    'Donor management; milk collection tracking; inventory monitoring; workflow and process management; administrative dashboard; data visualization and reporting; foundation for operational analytics; optional path for ethical donor-engagement patterns (compliance first).',
+                case_status_next:
+                    'Status: active development. Next steps: validation with the Volta Redonda human milk bank, refinement of clinical and admin flows, stronger security and privacy, controlled pilot, and API evolution for integrations.',
+            },
+            secret: {
+                title: 'Architecture Vision',
+                description: 'Unlocked content: vision of how real SaaS systems are structured.',
+                case_problem: 'This block is shown when you unlock the SaaS Operator badge — by exploring the assistant, opening case studies, and simulating the dashboard.',
+                case_solution: 'Event-driven architecture: webhooks receive events, queues process jobs, metrics update. The simulated console demonstrates this flow in an educational way.',
+                case_results: 'Technical maturity communication: the recruiter sees you understand systems in operation, not just interfaces.',
             },
         },
         contact: {
@@ -718,6 +806,7 @@ export const translations = {
             badge_backend_detective: 'Backend Detective',
             badge_product_mindset: 'Product Mindset',
             badge_saas_operator: 'SaaS Operator',
+            badge_social_impact: 'Social impact',
         },
         exploration: {
             open_panel: 'View exploration progress',
@@ -744,6 +833,7 @@ export const translations = {
                 event_pipeline_observed: 'Event pipeline observed.',
                 product_logic_recognized: 'Product logic recognized.',
                 full_system_interaction: 'Full system interaction completed.',
+                social_impact_system: 'Social-impact system recognized.',
             },
             insight: {
                 explorer: {
@@ -770,6 +860,11 @@ export const translations = {
                     title: 'Full system interaction completed',
                     description: 'You simulated the purchase flow and analyzed multiple cases, understanding the system as a whole.',
                     why: 'Communicates maturity in SaaS systems and product vision.',
+                },
+                social_impact: {
+                    title: 'Social-impact system',
+                    description: 'You opened the SIGBL case study — a human milk bank platform in active development.',
+                    why: 'Shows you build institution-facing products with real-world and public-health relevance.',
                 },
             },
         },
@@ -843,6 +938,13 @@ export const translations = {
                 context: 'Currently working as a Junior Developer, actively developing web systems and mobile applications in real production environments. Responsibilities include web system development, backend integration, UI implementation, mobile development using Flutter, and maintenance and evolution of existing systems.',
                 challenge: 'Delivering production-ready features and maintaining system quality.',
                 evolution: 'From independent builder to professional developer operating in team environments.',
+            },
+            phase_sigbl_milk_bank: {
+                title: 'Healthcare systems & social impact (SIGBL)',
+                summary: 'Platform in development for human milk bank operations.',
+                context: 'Building SIGBL — Integrated Human Milk Bank Management System — for real-world operations: donors, collections, inventory, and admin workflows, targeting implementation with a human milk bank in Volta Redonda, Brazil.',
+                challenge: 'Turning clinical and administrative processes into trustworthy, secure, institution-ready software.',
+                evolution: 'Extending the portfolio toward products with direct social impact and governance-grade requirements.',
             },
             phase_complex: {
                 title: 'Multi-system development and SaaS ecosystem',
@@ -1052,10 +1154,11 @@ export const translations = {
             topic_business_results: 'business_results',
             topic_strongest_area: 'strongest_area',
             topic_portfolio_different: 'portfolio_different',
+            topic_sigbl: 'sigbl',
             topic_dashboard_explain: 'dashboard_explain',
             topic_fallback: 'fallback',
             response_projects_main_title: 'Main Projects',
-            response_projects_main_body: 'Featured projects: Nutrify Web (nutritional plans system with AI and Mercado Pago checkout), Nutrify Mobile (Flutter app with Computer Vision for meal scanning), and Advanced Dashboard (panel with real-time ad metrics via WebSockets). Each solves a concrete business problem with the right stack.',
+            response_projects_main_body: 'Featured work includes: Nutrify Web (AI nutrition plans and Mercado Pago checkout), Nutrify Mobile (Flutter with Computer Vision), Advanced Dashboard (real-time ad metrics via WebSockets), and SIGBL — Integrated Human Milk Bank Management System (in development for real milk-bank operations, targeting implementation in Volta Redonda, Brazil). Each addresses a concrete problem with appropriate stack and architecture.',
             response_stack_title: 'Technical Stack',
             response_stack_body: 'Frontend: React, TypeScript, Framer Motion. Backend: Node.js, REST APIs, Webhooks. Mobile: Flutter, Dart. AI: OpenAI API, integrations. Infra: automation, workflows. Payments: Mercado Pago. Focus on high-performance ecosystems and scalable systems.',
             response_nutrify_title: 'Nutrify',
@@ -1066,6 +1169,9 @@ export const translations = {
             response_business_results_body: 'Revenue above $30k at Nutrify. Leading a team of 6. Zero integration failures in payment processing. Centralization of marketing data for ROI-based decisions. Products that scale and generate recurring value.',
             response_strongest_area_title: 'Strongest Area',
             response_strongest_area_body: 'Architecture of systems that combine performant frontend, robust backend, critical integrations (payments, AI), and real-time data. Product vision: understand the problem, choose the stack, and deliver measurable impact.',
+            response_sigbl_title: 'SIGBL — Human milk bank system',
+            response_sigbl_body:
+                'SIGBL (Sistema Integrado de Gestão do Banco de Leite) is a real product in development — not a classroom mock. It is a web platform to digitize and streamline human milk bank operations: donors, collections, inventory, admin workflows, and reporting. It is being prepared for use with a local human milk bank in Volta Redonda, RJ, Brazil. Stack: React (Vite), TypeScript, Tailwind; modular feature-based architecture; evolving Node/API layer and potential Flutter expansion. Goal: efficiency, traceability, and social impact on maternal and infant health.',
             response_portfolio_different_title: 'What makes this portfolio different',
             response_portfolio_different_body: 'Behaves like a product: integrated assistant, interactive narrative timeline, simulated dashboard, and subtle gamification. Demonstrates product thinking, not just project listing. Each section communicates technical decisions and business results.',
             response_dashboard_explain_title: 'About the panel',
@@ -1141,13 +1247,20 @@ export type TranslationKeys =
     | 'experience.sels_freelance.role' | 'experience.sels_freelance.company' | 'experience.sels_freelance.period' | 'experience.sels_freelance.description'
     | 'experience.nutrify.role' | 'experience.nutrify.company' | 'experience.nutrify.period' | 'experience.nutrify.description'
     | 'experience.sarton.role' | 'experience.sarton.company' | 'experience.sarton.period' | 'experience.sarton.description'
+    | 'experience.sigbl.role' | 'experience.sigbl.company' | 'experience.sigbl.period' | 'experience.sigbl.description'
     | 'projects.title' | 'projects.subtitle' | 'projects.view_case' | 'projects.close' | 'projects.problem' | 'projects.solution' | 'projects.results'
+    | 'projects.modal_architecture' | 'projects.modal_features' | 'projects.modal_status_next'
     | 'projects.nutrify_web.title' | 'projects.nutrify_web.description'
     | 'projects.nutrify_web.case_problem' | 'projects.nutrify_web.case_solution' | 'projects.nutrify_web.case_results'
     | 'projects.nutrify_mobile.title' | 'projects.nutrify_mobile.description'
     | 'projects.nutrify_mobile.case_problem' | 'projects.nutrify_mobile.case_solution' | 'projects.nutrify_mobile.case_results'
     | 'projects.dashboard.title' | 'projects.dashboard.description'
     | 'projects.dashboard.case_problem' | 'projects.dashboard.case_solution' | 'projects.dashboard.case_results'
+    | 'projects.sigbl.title' | 'projects.sigbl.description' | 'projects.sigbl.status_badge' | 'projects.sigbl.category_tag'
+    | 'projects.sigbl.highlight' | 'projects.sigbl.media_short' | 'projects.sigbl.meta_aria'
+    | 'projects.sigbl.impact_line_1' | 'projects.sigbl.impact_line_2' | 'projects.sigbl.impact_line_3'
+    | 'projects.sigbl.case_problem' | 'projects.sigbl.case_solution' | 'projects.sigbl.case_results'
+    | 'projects.sigbl.case_architecture' | 'projects.sigbl.case_features' | 'projects.sigbl.case_status_next'
     | 'projects.secret.title' | 'projects.secret.description'
     | 'projects.secret.case_problem' | 'projects.secret.case_solution' | 'projects.secret.case_results'
     | 'contact.title' | 'contact.eyebrow' | 'contact.headline' | 'contact.lead'
@@ -1161,18 +1274,19 @@ export type TranslationKeys =
     | 'footer.rights'
     | 'gamification.open_badges' | 'gamification.achievements'
     | 'gamification.badge_explorer' | 'gamification.badge_system_analyst' | 'gamification.badge_backend_detective'
-    | 'gamification.badge_product_mindset' | 'gamification.badge_saas_operator'
+    | 'gamification.badge_product_mindset' | 'gamification.badge_saas_operator' | 'gamification.badge_social_impact'
     | 'exploration.open_panel' | 'exploration.panel_title' | 'exploration.exploration_progress'
     | 'exploration.insights_title' | 'exploration.insight_placeholder' | 'exploration.dismiss_toast'
     | 'exploration.stage.initial' | 'exploration.stage.awareness' | 'exploration.stage.understanding' | 'exploration.stage.full_context'
     | 'exploration.section.trajectory' | 'exploration.section.projects' | 'exploration.section.console' | 'exploration.section.guide'
     | 'exploration.toast.trajectory_complete' | 'exploration.toast.system_flow_understood' | 'exploration.toast.event_pipeline_observed'
-    | 'exploration.toast.product_logic_recognized' | 'exploration.toast.full_system_interaction'
+    | 'exploration.toast.product_logic_recognized' | 'exploration.toast.full_system_interaction' | 'exploration.toast.social_impact_system'
     | 'exploration.insight.explorer.title' | 'exploration.insight.explorer.description' | 'exploration.insight.explorer.why'
     | 'exploration.insight.system_analyst.title' | 'exploration.insight.system_analyst.description' | 'exploration.insight.system_analyst.why'
     | 'exploration.insight.backend_detective.title' | 'exploration.insight.backend_detective.description' | 'exploration.insight.backend_detective.why'
     | 'exploration.insight.product_mindset.title' | 'exploration.insight.product_mindset.description' | 'exploration.insight.product_mindset.why'
     | 'exploration.insight.saas_operator.title' | 'exploration.insight.saas_operator.description' | 'exploration.insight.saas_operator.why'
+    | 'exploration.insight.social_impact.title' | 'exploration.insight.social_impact.description' | 'exploration.insight.social_impact.why'
     | 'timeline.title' | 'timeline.subtitle' | 'timeline.placeholder_hint'
     | 'timeline.label_context' | 'timeline.label_challenge' | 'timeline.label_evolution'
     | 'timeline.phase_origins.title' | 'timeline.phase_origins.summary' | 'timeline.phase_origins.context' | 'timeline.phase_origins.challenge' | 'timeline.phase_origins.evolution'
@@ -1184,6 +1298,7 @@ export type TranslationKeys =
     | 'timeline.phase_webhooks.title' | 'timeline.phase_webhooks.summary' | 'timeline.phase_webhooks.context' | 'timeline.phase_webhooks.challenge' | 'timeline.phase_webhooks.evolution'
     | 'timeline.phase_ai.title' | 'timeline.phase_ai.summary' | 'timeline.phase_ai.context' | 'timeline.phase_ai.challenge' | 'timeline.phase_ai.evolution'
     | 'timeline.phase_junior_dev.year' | 'timeline.phase_junior_dev.title' | 'timeline.phase_junior_dev.summary' | 'timeline.phase_junior_dev.context' | 'timeline.phase_junior_dev.challenge' | 'timeline.phase_junior_dev.evolution'
+    | 'timeline.phase_sigbl_milk_bank.title' | 'timeline.phase_sigbl_milk_bank.summary' | 'timeline.phase_sigbl_milk_bank.context' | 'timeline.phase_sigbl_milk_bank.challenge' | 'timeline.phase_sigbl_milk_bank.evolution'
     | 'timeline.phase_complex.title' | 'timeline.phase_complex.summary' | 'timeline.phase_complex.context' | 'timeline.phase_complex.challenge' | 'timeline.phase_complex.evolution'
     | 'timeline.phase_product.title' | 'timeline.phase_product.summary' | 'timeline.phase_product.context' | 'timeline.phase_product.challenge' | 'timeline.phase_product.evolution'
     | 'story.eyebrow' | 'story.title' | 'story.description' | 'story.placeholder' | 'story.placeholder_hint'
@@ -1223,6 +1338,7 @@ export type TranslationKeys =
     | 'assistant.response_backend_experience_title' | 'assistant.response_backend_experience_body'
     | 'assistant.response_business_results_title' | 'assistant.response_business_results_body'
     | 'assistant.response_strongest_area_title' | 'assistant.response_strongest_area_body'
+    | 'assistant.response_sigbl_title' | 'assistant.response_sigbl_body'
     | 'assistant.response_portfolio_different_title' | 'assistant.response_portfolio_different_body'
     | 'assistant.response_dashboard_explain_title' | 'assistant.response_dashboard_explain_body'
     | 'assistant.response_fallback_title' | 'assistant.response_fallback_body'

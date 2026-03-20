@@ -7,6 +7,7 @@ export type GuideTopicId =
   | 'projects_main'
   | 'stack'
   | 'nutrify'
+  | 'sigbl'
   | 'backend_experience'
   | 'business_results'
   | 'strongest_area'
@@ -45,6 +46,29 @@ export const guideTopics: GuideTopic[] = [
     keywordsPt: ['nutrify', 'explicar', 'conte', 'sobre', 'produto'],
     responseTitleKey: 'assistant.response_nutrify_title',
     responseBodyKey: 'assistant.response_nutrify_body',
+  },
+  {
+    id: 'sigbl',
+    keywords: [
+      'sigbl',
+      'milk bank',
+      'human milk',
+      'donor',
+      'healthcare',
+      'volta redonda',
+      'institutional',
+    ],
+    keywordsPt: [
+      'sigbl',
+      'banco de leite',
+      'leite humano',
+      'doadora',
+      'doador',
+      'volta redonda',
+      'institucional',
+    ],
+    responseTitleKey: 'assistant.response_sigbl_title',
+    responseBodyKey: 'assistant.response_sigbl_body',
   },
   {
     id: 'backend_experience',
